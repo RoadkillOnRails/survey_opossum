@@ -1,6 +1,12 @@
-<h1>Editing Session</h1>
+<p id="notice"><%= notice %></p>
+<p id="alert"><%= alert %></p>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @session %> |
-<%= link_to 'Back', sessions_path %>
+<h1>Change Password</h1>
+<%= form_tag login_path, method: "PATCH" do %>
+  <%= form_for :form_fields do |ff| %>
+    <p><%= ff.email_field :email, {value: @author.email, readonly: true }%></p>
+    <p><%= ff.password_field :password, placeholder: "Old Password" %></p>
+    <p><%= ff.password_field :new_password, placeholder: "New Password" %></p>
+    <%= submit_tag "Change Password" %>
+  <% end %>
+<% end %>
