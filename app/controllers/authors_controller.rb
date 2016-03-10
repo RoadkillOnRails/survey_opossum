@@ -1,14 +1,6 @@
 class AuthorsController < ApplicationController
-  before_action :set_author, only: [:show, :edit, :update, :destroy]
+  before_action :set_author, only: [:edit, :update, :destroy]
 
-  # GET /authors
-  def index
-    @authors = Author.all
-  end
-
-  # GET /authors/1
-  def show
-  end
 
   # GET /authors/new
   def new
@@ -24,6 +16,7 @@ class AuthorsController < ApplicationController
     @author = Author.new(author_params)
 
     if @author.save
+      session[:user_id] = @auther.id
       redirect_to root_path, notice: 'Author was successfully created.'
     else
       render :new
@@ -48,7 +41,7 @@ class AuthorsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_author
-      @author = Author.find(params[:id])
+      @author = Author.find(session[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
