@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   root 'dashboard#index'
   get 'dashboard/index'
-  
+
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'login' => 'sessions#destroy'
-  get 'login/edit' => 'authenticate#edit', as: :edit_login
-  patch 'login' => 'authenticate#update'
-  put 'login' => 'authenticate#update'
+  get 'login/edit' => 'sessions#edit', as: :edit_login
+  patch 'login' => 'sessions#update'
+  put 'login' => 'sessions#update'
 
   get 'signup' => 'authors#new'
   post 'signup' => 'authors#create', as: :authors
