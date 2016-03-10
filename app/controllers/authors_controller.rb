@@ -16,6 +16,7 @@ class AuthorsController < ApplicationController
     @author = Author.new(author_params)
 
     if @author.save
+      session[:user_id] = @auther.id
       redirect_to root_path, notice: 'Author was successfully created.'
     else
       render :new
