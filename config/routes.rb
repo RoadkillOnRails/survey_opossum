@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
+  root 'dashboard#index'
   get 'dashboard/index'
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'login' => 'sessions#destroy'
+  get 'signup' => 'authors#new'
+  post 'signup' => 'authors#create', as: :authors
+  delete 'signup' => 'authors#destroy'
+  get 'profile' => 'authors#edit', as: :edit_profile
+  patch 'profile' => 'authors#update'
+  put 'profile' => 'authors#update'
 
-  resources :authors
-  resources :surveys
   resources :surveys
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
