@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question_type_id: 1
+  survey_id: 1
+  question_text: MyText
+  description: MyText
+  order: 1
+  required: false
+
+two:
+  question_type_id: 1
+  survey_id: 1
+  question_text: MyText
+  description: MyText
+  order: 1
+  required: false
