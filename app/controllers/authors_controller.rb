@@ -24,7 +24,7 @@ class AuthorsController < ApplicationController
     @author = Author.new(author_params)
 
     if @author.save
-      redirect_to @author, notice: 'Author was successfully created.'
+      redirect_to root_path, notice: 'Author was successfully created.'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class AuthorsController < ApplicationController
   # PATCH/PUT /authors/1
   def update
     if @author.update(author_params)
-      redirect_to @author, notice: 'Author was successfully updated.'
+      redirect_to root_path, notice: 'Author was successfully updated.'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class AuthorsController < ApplicationController
   # DELETE /authors/1
   def destroy
     @author.destroy
-    redirect_to authors_url, notice: 'Author was successfully destroyed.'
+    redirect_to login_path, notice: 'Author was successfully destroyed.'
   end
 
   private
@@ -53,6 +53,6 @@ class AuthorsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def author_params
-      params.require(:author).permit(:email, :password_digest, :first_name, :last_name)
+      params.require(:author).permit(:email, :password, :first_name, :last_name)
     end
 end
