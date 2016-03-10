@@ -2,11 +2,6 @@ class SurveysController < ApplicationController
   before_action :set_survey, only: [:show, :edit, :update, :destroy]
   before_action :authenticate
 
-  # GET /surveys
-  def index
-    @surveys = Survey.all
-  end
-
   # GET /surveys/1
   def show
   end
@@ -14,6 +9,8 @@ class SurveysController < ApplicationController
   # GET /surveys/new
   def new
     @survey = Survey.new
+    @survey.questions.build
+    # @surevy.options.build
   end
 
   # GET /surveys/1/edit
