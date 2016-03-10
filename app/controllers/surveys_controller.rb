@@ -1,5 +1,6 @@
 class SurveysController < ApplicationController
   before_action :set_survey, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate
 
   # GET /surveys
   def index
@@ -24,7 +25,7 @@ class SurveysController < ApplicationController
     @survey = Survey.new(survey_params)
 
     if @survey.save
-      redirect_to @survey, notice: 'Survey was successfully created.'
+      redirect_to survey_path, notice: 'Survey was successfully created.'
     else
       render :new
     end
