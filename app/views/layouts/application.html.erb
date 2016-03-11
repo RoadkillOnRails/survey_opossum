@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <span>
   <title>SurveyOpossum</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -8,7 +9,18 @@
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <div class="header">
+    <span>
+      <%= p "Hi, #{Author.find(session[:user_id]).first_name}" %>
+    </span>
+    <div>
 
+
+  <div class="profile_dropdown">
+    <div> <%= link_to "Edit Profile", edit_profile_path %></div>
+    <div><%=  link_to "Change Password", edit_login_path %></div>
+    <div><%= link_to "Sign Out", delete_login_path %></div>
+  </div>
 <%= yield %>
 
 </body>
