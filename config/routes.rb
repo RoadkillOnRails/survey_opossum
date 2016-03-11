@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   put 'profile' => 'authors#update'
 
   resources :surveys, except: [:index]
+  patch 'publish/:id' => 'surveys#publish', as: :publish
+  patch 'unpublish/:id' => 'surveys#unpublish', as: :unpublish
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

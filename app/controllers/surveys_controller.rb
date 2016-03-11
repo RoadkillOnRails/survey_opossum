@@ -1,5 +1,5 @@
 class SurveysController < ApplicationController
-  before_action :set_survey, only: [:show, :edit, :update, :destroy]
+  before_action :set_survey, only: [:show, :edit, :update, :destroy, :publish, :unpublish]
   before_action :authenticate
 
   # GET /surveys/1
@@ -41,6 +41,28 @@ class SurveysController < ApplicationController
   def destroy
     @survey.destroy
     redirect_to root_path, notice: 'Survey was successfully destroyed.'
+  end
+
+  def publish
+    if @survey.token
+      redirect_to root_path, notice: 'Survey has already been published.'
+    elsif @survey.publish
+      redirect_to root_path, notice: 'Survey was successfully published.'
+    else
+      redirect_to root_path, notice: 'Survey failed to publish.'
+    end
+  end
+
+  def unpublish
+    if @survey.token.nil?
+      redirect_to root_path, notice: 'Survey is already unpublished.'
+    elsif @survey.answers.count > 0
+      redirect_to root_path, notice: 'Survey failed to unpublish as it has already recieved responses.'
+    elsif @survey.unpublish
+      redirect_to root_path, notice: 'Survey successfully unpublished and ready to edit.'
+    else
+      redirect_to root_path, notice: 'Survey failed to unpublished.'
+    end
   end
 
   private
