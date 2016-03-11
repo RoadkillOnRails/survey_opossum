@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
-  delete 'login' => 'sessions#destroy'
+  delete 'login' => 'sessions#destroy', as: :delete_login
   get 'login/edit' => 'sessions#edit', as: :edit_login
   patch 'login' => 'sessions#update'
   put 'login' => 'sessions#update'
@@ -18,8 +18,7 @@ Rails.application.routes.draw do
   post 'signup' => 'authors#create', as: :authors
   delete 'signup' => 'authors#destroy'
   get 'profile' => 'authors#edit', as: :edit_profile
-  patch 'profile' => 'authors#update'
-  put 'profile' => 'authors#update'
+  patch 'profile' => 'authors#update', as: :author
 
   resources :surveys, except: [:index]
   patch 'publish/:id' => 'surveys#publish', as: :publish
