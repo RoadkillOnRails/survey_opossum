@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 <p id="alert"><%= alert %></p>
 
+<%= image_tag asset_url("loginPic.jpg"), class: "whatever" %>
+
 <h1>Log on to Survey Opossum</h1>
 <%= form_tag login_path do %>
   <p><%= email_field_tag :email, nil, placeholder: "Email" %></p>
