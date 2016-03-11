@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
-  delete 'login' => 'sessions#destroy', as: :delete_login
+  delete 'login' => 'sessions#destroy'
   get 'login/edit' => 'sessions#edit', as: :edit_login
   patch 'login' => 'sessions#update'
   put 'login' => 'sessions#update'

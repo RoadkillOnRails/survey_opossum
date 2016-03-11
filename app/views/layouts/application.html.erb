@@ -19,7 +19,7 @@
   <div class="profile_dropdown">
     <div> <%= link_to "Edit Profile", edit_profile_path %></div>
     <div><%=  link_to "Change Password", edit_login_path %></div>
-    <div><%= link_to "Sign Out", delete_login_path %></div>
+    <div><%= link_to "Sign Out", login_path, method: :delete %></div>
   </div>
 <%= yield %>
 
