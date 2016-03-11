@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'questionaire/:id/new' => 'questionaire#new'
+  post 'questionaire/create'
+  get 'questionaire/show'
+  get 'questionaire/notfound'
+
   root 'dashboard#index'
   get 'dashboard/index'
 

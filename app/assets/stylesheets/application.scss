@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  *= require font-awesome
+ *= require reset
  */
 
 // NOTE: There is some remaining live styling in scaffolds.scss
@@ -45,25 +46,49 @@ $borderRadius: 3px;
   border-bottom: $borderStyle;
   text-align: center;
   padding-bottom: 5px;
+  font-size: 2em;
+}
 
+.noPubSurveys {
+  display: none;
+}
+
+.noSavedSurveys {
+  display: none;
+}
+
+.survey {
+  margin-top: 5px;
 }
 
 .surveyName {
-  display: inline;
+  display: inline-block;
   font-size: 1.5em;
   padding-left: 5px;
+  width: 300px;
+  height: 25px;
+  line-height: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.surveyActions {
+  float: right;
+  padding-top: 3px;
 }
 
 .fa-bar-chart, .unpubButton, .deleteButton, .pubButton, .editButton{
   display: inline;
-  float: right;
+  // float: right;
   padding: 2px;
   border: $borderStyle;
   border-radius: $borderRadius;
+  text-decoration: none;
   margin:{
     right: 5px;
     bottom: 5px;
-    left: 5px;
+    // left: 5px;
   }
 }
 
@@ -72,6 +97,7 @@ $borderRadius: 3px;
   margin:{
     left: 5px;
     bottom: 5px;
+    top: 5px;
   }
 }
 
