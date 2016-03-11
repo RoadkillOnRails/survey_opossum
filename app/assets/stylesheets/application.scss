@@ -20,6 +20,7 @@
 
 $borderStyle: solid 2px black;
 $borderRadius: 3px;
+$fontFamily: 'Raleway', sans-serif;
 
 #pubdSurveys {
   border: $borderStyle;
@@ -30,6 +31,7 @@ $borderRadius: 3px;
   width: 45%;
   margin-left: 4%;
   float: left;
+  font-family: $fontFamily;
 }
 
 #savedSurveys {
@@ -40,6 +42,7 @@ $borderRadius: 3px;
   display: inline-block;
   width: 45%;
   margin-left: 1%;
+  font-family: $fontFamily;
 }
 
 .divTitle {
@@ -50,11 +53,31 @@ $borderRadius: 3px;
 }
 
 .noPubSurveys {
+  font: {
+    size: 1.2em;
+    weight: bold;
+  }
+  text-align: center;
   display: none;
+  margin:{
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+  }
 }
 
 .noSavedSurveys {
+  font: {
+    size: 1.2em;
+    weight: bold;
+  }
+  text-align: center;
   display: none;
+  margin:{
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+  }
 }
 
 .survey {
@@ -84,13 +107,21 @@ $borderRadius: 3px;
   padding: 2px;
   border: $borderStyle;
   border-radius: $borderRadius;
-  text-decoration: none;
+  font-weight: bolder;
   margin:{
     right: 5px;
     bottom: 5px;
-    // left: 5px;
   }
 }
+
+.fa-bar-chart {
+  padding-top: 3px;
+}
+
+a {
+  text-decoration: none;
+}
+
 
 .newSurvey {
   font-style: italic;

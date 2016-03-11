@@ -1,3 +1,4 @@
+// this function syntax allows it to run upon page load instead of before the page loads
 $(function() {
 
 if ($(".pubSurveyList .survey ").length === 0){
