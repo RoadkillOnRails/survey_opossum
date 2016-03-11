@@ -20,6 +20,35 @@ $borderStyle: solid 2px black;
 $borderRadius: 3px;
 $fontFamily: 'Raleway', sans-serif;
 
+// styling for header
+
+.header {
+  margin-bottom: 20px;
+  background-color: lightgrey;
+  padding: 10px;
+}
+
+.userInfo {
+  float: right;
+  position: relative;
+}
+
+.profile_dropdown {
+  font-size: 1.2em;
+  padding: 5px;
+  display: none;
+  background: lightgrey;
+  position: absolute;
+  top: 80px;
+  border-radius: $borderRadius;
+}
+
+.opposumicon {
+  width: 60px;
+}
+
+// styling for dashboard page
+
 #pubdSurveys {
   border: $borderStyle;
   border:{
