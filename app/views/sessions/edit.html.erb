@@ -2,7 +2,7 @@
 <p id="alert"><%= alert %></p>
 
 <h1>Change Password</h1>
-<%= form_tag login_path, method: "PATCH" do %>
+<%= form_tag login_path, method: "PUT" do %>
   <%= form_for :form_fields do |ff| %>
     <p><%= ff.email_field :email, {value: @author.email, readonly: true }%></p>
     <p><%= ff.password_field :password, placeholder: "Old Password" %></p>
