@@ -23,10 +23,15 @@
 
   <%= f.fields_for :questions do |ff| %>
     <div>
+      <%= ff.number_field :order %>
       <%= ff.collection_select(:question_type_id, QuestionType.all, :id, :category) %>
       <%= ff.text_field :question_text %>
       <%= ff.text_area :description %>
       <%= ff.check_box :required %>
+      <%= ff.fields_for :options do |fff| %>
+        <%= fff.text_field :option %>
+        <%= fff.text_field :value %>
+      <% end %>
     </div>
   <% end %>
   <div class="actions">

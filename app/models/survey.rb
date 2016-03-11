@@ -1,7 +1,6 @@
 class Survey < ActiveRecord::Base
   belongs_to :author
-  has_many :questions, dependent: :destroy
-  has_many :options, through: :questions
+  has_many :questions, dependent: :destroy  
 
   validates :title, presence: true
 

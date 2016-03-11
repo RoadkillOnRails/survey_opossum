@@ -8,9 +8,9 @@ class SurveysController < ApplicationController
 
   # GET /surveys/new
   def new
-    @survey = Survey.new
-    @survey.questions.build
-    # @surevy.options.build
+    @survey = Survey.new(author_id: session[:user_id])
+    question = @survey.questions.build
+    question.options.build
   end
 
   # GET /surveys/1/edit
@@ -22,7 +22,7 @@ class SurveysController < ApplicationController
     @survey = Survey.new(survey_params)
 
     if @survey.save
-      redirect_to survey_path, notice: 'Survey was successfully created.'
+      redirect_to root_path, notice: 'Survey was successfully created.'
     else
       render :new
     end
@@ -31,7 +31,7 @@ class SurveysController < ApplicationController
   # PATCH/PUT /surveys/1
   def update
     if @survey.update(survey_params)
-      redirect_to @survey, notice: 'Survey was successfully updated.'
+      redirect_to root_path, notice: 'Survey was successfully updated.'
     else
       render :edit
     end
@@ -40,7 +40,7 @@ class SurveysController < ApplicationController
   # DELETE /surveys/1
   def destroy
     @survey.destroy
-    redirect_to surveys_url, notice: 'Survey was successfully destroyed.'
+    redirect_to root_path, notice: 'Survey was successfully destroyed.'
   end
 
   private
