@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'questionaire/:id/new' => 'questionaire#new'
+  get 'questionaire/:token/new' => 'questionaire#new'
   post 'questionaire/create'
   get 'questionaire/show'
   get 'questionaire/notfound'
@@ -18,8 +18,7 @@ Rails.application.routes.draw do
   post 'signup' => 'authors#create', as: :authors
   delete 'signup' => 'authors#destroy'
   get 'profile' => 'authors#edit', as: :edit_profile
-  patch 'profile' => 'authors#update'
-  put 'profile' => 'authors#update'
+  patch 'profile' => 'authors#update', as: :author
 
   resources :surveys, except: [:index]
   patch 'publish/:id' => 'surveys#publish', as: :publish
