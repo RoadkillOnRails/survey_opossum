@@ -1,11 +1,37 @@
+<div id="pubdSurveys">
+  <h2 class="divTitle">Published Surveys</h2>
+  <div class="surveyList">
+    <div class="survey" id="survey1">
+      <span class="surveyName">Iron Yard Survey</span>
+      <i class="fa fa-bar-chart"></i>
+      <div class="unpubButton">Unpublish</div>
+      <div class="deleteButton">Delete</div>
+    </div>
+  </div>
+</div>
+
+<div id="savedSurveys">
+  <h2 class="divTitle">Surveys in Progress</h2>
+  <div class="surveyList">
+    <div class="newSurvey"><i id="plus" class="fa fa-plus-square"></i>Create a New Survey</div>
+    <div class="survey" id="surveySaved1">
+      <span class="surveyName">Roadkill Survey</span>
+      <div class="editButton">Edit</div>
+      <div class="pubButton">Publish</div>
+      <div class="deleteButton">Delete</div>
+    </div>
+  </div>
+</div>
+
+
 <div>
 <table>
 <tbody>
   <% @surveys.each do |survey| %>
     <tr>
-      <td><%= survey.author.name %></td>
+      <!-- <td><%= survey.author.name %></td> -->
       <td><%= survey.title %></td>
-      <td><%= survey.description %></td>
+      <!-- <td><%= survey.description %></td> -->
       <td><%= link_to 'Edit', edit_survey_path(survey) %></td>
       <td><%= link_to 'Destroy', survey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
