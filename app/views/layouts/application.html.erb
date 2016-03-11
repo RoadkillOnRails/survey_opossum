@@ -10,7 +10,7 @@
 <body>
   <div class="header">
     <span>
-      <%= p "Hi, #{Author.find(session[:user_id]).first_name}" %>
+      <%= p "Hi, #{Author.find(session[:user_id]).first_name}" if session[:user_id] != nil%>
     </span>
     <div>
 
