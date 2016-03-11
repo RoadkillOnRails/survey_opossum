@@ -1,9 +1,11 @@
 class QuestionaireController < ApplicationController
   def new
-    @survey = Survey.where('token = ? ', params[:token])
-    if @survey.empty?
+    @survey = Survey.where(token: params[:token]).first
+    unless @survey
       redirect_to questionaire_notfound_path
     end
+    @questions = @survey.questions
+    @answer = Answer.new
   end
 
   def create

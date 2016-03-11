@@ -18,8 +18,12 @@
   <strong>Description:</strong>
   <%= @survey.description %>
 </div>
-
+<br>
 <div>
-  <%= @survey.questions.question_text %>
-  <%= @survey.answers.answer %>
+  <% @survey.questions.each do |q| %>
+    <tr>
+      <td><%= q.question_text %></td>
+      <td><%= q.answers.answer %></td>
+    </tr>
+  <% end %>
 </div>
