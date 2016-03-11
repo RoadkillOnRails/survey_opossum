@@ -20,10 +20,6 @@
 </div>
 
 <div>
-    <% @survey.each do |survey| %>
-      <tr>
-        <td><%= survey.question %></td>
-        <td><%= survey.answer %></td>
-      </tr>
-    <% end %>
+  <%= @survey.questions.question_text %>
+  <%= @survey.answers.answer %>
 </div>
