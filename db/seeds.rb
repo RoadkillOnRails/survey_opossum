@@ -13,3 +13,7 @@ end
 20.times do |f|
   Author.create(password: "monkey", email: Faker::Internet.email, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
 end
+
+QuestionType.create(category: "Short")
+QuestionType.create(category: "Long")
+QuestionType.create(category: "YesNo")

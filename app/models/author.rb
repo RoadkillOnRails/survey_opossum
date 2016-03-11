@@ -4,7 +4,7 @@ class Author < ActiveRecord::Base
   validates :email, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true
-  has_many :surveys
+  has_many :surveys, dependent: :destroy
 
   def name
     "#{first_name} #{last_name}"
