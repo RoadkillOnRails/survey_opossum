@@ -46,7 +46,19 @@ $borderRadius: 3px;
   border-bottom: $borderStyle;
   text-align: center;
   padding-bottom: 5px;
+  font-size: 2em;
+}
 
+.noPubSurveys {
+  display: none;
+}
+
+.noSavedSurveys {
+  display: none;
+}
+
+.survey {
+  margin-top: 5px;
 }
 
 .surveyName {
@@ -61,16 +73,22 @@ $borderRadius: 3px;
   text-overflow: ellipsis;
 }
 
+.surveyActions {
+  float: right;
+  padding-top: 3px;
+}
+
 .fa-bar-chart, .unpubButton, .deleteButton, .pubButton, .editButton{
   display: inline;
-  float: right;
+  // float: right;
   padding: 2px;
   border: $borderStyle;
   border-radius: $borderRadius;
+  text-decoration: none;
   margin:{
     right: 5px;
     bottom: 5px;
-    left: 5px;
+    // left: 5px;
   }
 }
 
@@ -79,6 +97,7 @@ $borderRadius: 3px;
   margin:{
     left: 5px;
     bottom: 5px;
+    top: 5px;
   }
 }
 
