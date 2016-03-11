@@ -109,6 +109,8 @@ GEM
     rake (11.0.1)
     rdoc (4.2.2)
       json (~> 1.4)
+    reset_css_rails (1.1.0)
+      rails
     sass (3.4.21)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -159,6 +161,7 @@ DEPENDENCIES
   railroady
   rails (= 4.2.5.1)
   rails-footnotes (~> 4.0)
+  reset_css_rails (~> 1.1)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
