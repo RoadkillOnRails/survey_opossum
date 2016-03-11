@@ -9,18 +9,17 @@
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <div class="header">
+  <header class="header">
     <span>
       <%= p "Hi, #{Author.find(session[:user_id]).first_name}" %>
     </span>
-    <div>
-
-
-  <div class="profile_dropdown">
-    <div> <%= link_to "Edit Profile", edit_profile_path %></div>
-    <div><%=  link_to "Change Password", edit_login_path %></div>
-    <div><%= link_to "Sign Out", delete_login_path %></div>
-  </div>
+    <i class="fa fa-chevron-circle-down"></i>
+    <div class="profile_dropdown">
+      <div> <%= link_to "Edit Profile", edit_profile_path %></div>
+      <div><%=  link_to "Change Password", edit_login_path %></div>
+      <div><%= link_to "Sign Out", delete_login_path %></div>
+    </div>
+  </header>
 <%= yield %>
 
 </body>
