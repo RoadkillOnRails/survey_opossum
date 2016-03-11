@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
       author.update(password: session_params[:new_password])
       redirect_to root_path, notice: "Password has been changed"
     else
-      flash.now[:alert] = "Old Password Does Not Macth!"
+      flash.now[:alert] = "Old Password Does Not Match!"
       render :edit
     end
   end
