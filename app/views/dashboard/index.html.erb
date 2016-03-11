@@ -3,7 +3,7 @@
   <div class="surveyList">
     <% @published_surveys.each do |survey| %>
       <div class="survey" id="survey1">
-        <span class="surveyName"><%= survey.title %></span>
+        <div class="surveyName"><%= survey.title %></div>
         <i class="fa fa-bar-chart"></i>
         <div class="unpubButton"><%= link_to 'Unpublish', unpublish_path(survey), method: :patch %></div>
         <div class="deleteButton"><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure?' } %></div>
@@ -18,7 +18,7 @@
     <div class="newSurvey"><i id="plus" class="fa fa-plus-square"><%= link_to '', new_survey_path %></i>Create a New Survey</div>
       <% @unpublished_surveys.each do |survey| %>
         <div class="survey" id="surveySaved1">
-          <span class="surveyName"><%= survey.title %></span>
+          <div class="surveyName"><%= survey.title %></div>
           <div class="editButton"><%= link_to 'Edit', edit_survey_path(survey) %></div>
           <div class="pubButton"><%= link_to 'Publish', publish_path(survey), method: :patch %></div>
           <div class="deleteButton"><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure?' } %></div>
