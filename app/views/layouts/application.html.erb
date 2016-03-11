@@ -9,18 +9,21 @@
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <div class="header">
-    <span>
-      <%= p "Hi, #{Author.find(session[:user_id]).first_name}" if session[:user_id] != nil%>
-    </span>
-    <div>
-
-
-  <div class="profile_dropdown">
-    <div> <%= link_to "Edit Profile", edit_profile_path %></div>
-    <div><%=  link_to "Change Password", edit_login_path %></div>
-    <div><%= link_to "Sign Out", login_path, method: :delete %></div>
-  </div>
+  <header class="header">
+    <%= image_tag asset_url("roadkillpossum.jpg"), class: "opposumicon" %>
+    <div class="userInfo">
+      <span>
+        <%= p "Hi, #{Author.find(session[:user_id]).first_name}" if session[:user_id] != nil%>
+      </span>
+      <i id="downCaret" class="fa fa-chevron-circle-down fa-2x"></i>
+      <%= image_tag asset_url("opossumicon.png"), class: "opposumicon" %>
+      <div class="profile_dropdown">
+        <div> <%= link_to "Edit Profile", edit_profile_path %></div>
+        <div><%=  link_to "Change Password", edit_login_path %></div>
+        <div><%= link_to "Sign Out", delete_login_path %></div>
+      </div>
+    </div>
+  </header>
 <%= yield %>
 
 </body>
