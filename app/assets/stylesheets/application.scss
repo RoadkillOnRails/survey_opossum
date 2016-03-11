@@ -82,3 +82,24 @@ $borderRadius: 3px;
 // i {
 //
 // }
+
+
+// Login Page Styling //
+
+.background-image {
+  position: relative;
+  width: 100%;
+}
+
+.login-ribbon {
+  font-size: 3em;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  background: hsla(360, 100%, 100%, 0.5);
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
