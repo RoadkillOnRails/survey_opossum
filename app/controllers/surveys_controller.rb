@@ -4,6 +4,7 @@ class SurveysController < ApplicationController
 
   # GET /surveys/1
   def show
+    @survey = Survey.find_by(author_id: session[:user_id])
   end
 
   # GET /surveys/new

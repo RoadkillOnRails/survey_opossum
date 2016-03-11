@@ -1,23 +1,25 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></div>
 
-<p>
+
+
+
+
+<div>
   <strong>Author:</strong>
-  <%= @survey.author_id %>
-</p>
+  <%= @survey.author.name %>
+</div>
 
-<p>
+<div>
   <strong>Title:</strong>
   <%= @survey.title %>
-</p>
+</div>
 
-<p>
+<div>
   <strong>Description:</strong>
   <%= @survey.description %>
-</p>
+</div>
 
-<p>
-  <strong>Token:</strong>
-  <%= @survey.token %>
-</p>
-
-<%= link_to 'Back', root_path %>
+<div>
+  <%= @survey.questions.question_text %>
+  <%= @survey.answers.answer %>
+</div>
