@@ -5,11 +5,12 @@
 
 <%= image_tag asset_url("loginPic.jpg"), class: "background-image" %>
 
+
 <div class = "login-ribbon">
-<h1>Log on to Survey Opossum</h1>
+<h1>Survey Opossum</h1>
 <%= form_tag login_path do %>
-  <p><%= email_field_tag :email, nil, placeholder: "Email" %></p>
-  <p><%= password_field_tag :password, nil, placeholder: "Password" %></p>
+  <p class = "signup" ><%= email_field_tag :email, nil, placeholder: "Email" %></p>
+  <p class = "signup"><%= password_field_tag :password, nil, placeholder: "Password" %></p>
   <%= submit_tag "Login" %>
 <% end %>
 </div>
