@@ -11,16 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160310202802) do
+ActiveRecord::Schema.define(version: 20160311203638) do
 
   create_table "answers", force: :cascade do |t|
     t.integer  "question_id"
     t.text     "answer"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "taker_id"
   end
 
   add_index "answers", ["question_id"], name: "index_answers_on_question_id"
+  add_index "answers", ["taker_id"], name: "index_answers_on_taker_id"
 
   create_table "authors", force: :cascade do |t|
     t.string   "email"
@@ -70,5 +72,11 @@ ActiveRecord::Schema.define(version: 20160310202802) do
   end
 
   add_index "surveys", ["author_id"], name: "index_surveys_on_author_id"
+
+  create_table "takers", force: :cascade do |t|
+    t.string   "token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
