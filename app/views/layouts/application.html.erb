@@ -13,7 +13,7 @@
     <%= image_tag asset_url("roadkillpossum.jpg"), class: "opposumicon" %>
     <div class="userInfo">
       <span>
-        <%= p "Hi, #{Author.find(session[:user_id]).first_name}" if session[:user_id] != nil%>
+        <%= p "Hi, #{Author.find(session[:user_id]).first_name}" if session[:user_id] != nil %>
       </span>
       <i id="downCaret" class="fa fa-chevron-circle-down fa-2x"></i>
       <%= image_tag asset_url("opossumicon.png"), class: "opposumicon" %>

@@ -31,6 +31,8 @@ if Rails.env.development?
 end
 
 
+
+
 QuestionType.create(category: "Short")
 QuestionType.create(category: "Long")
 QuestionType.create(category: "YesNo")
