@@ -1,10 +1,12 @@
 class SurveysController < ApplicationController
-  before_action :set_survey, only: [:show, :edit, :update, :destroy, :publish, :unpublish]
+  before_action :set_survey, only: [:edit, :update, :destroy, :publish, :unpublish]
   before_action :authenticate
 
   # GET /surveys/1
   def show
-    @survey = Survey.find_by(author_id: session[:user_id])
+    @survey = Survey.find_by(token: params[:token])
+    @questions = @survey.questions
+    # @answers = @questions.answers
   end
 
   # GET /surveys/new

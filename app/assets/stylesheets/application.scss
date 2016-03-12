@@ -16,11 +16,38 @@
  *= require reset
  */
 
-// NOTE: There is some remaining live styling in scaffolds.scss
-
 $borderStyle: solid 2px black;
 $borderRadius: 3px;
 $fontFamily: 'Raleway', sans-serif;
+
+// styling for header
+
+.header {
+  margin-bottom: 20px;
+  background-color: lightgrey;
+  padding: 10px;
+}
+
+.userInfo {
+  float: right;
+  position: relative;
+}
+
+.profile_dropdown {
+  font-size: 1.2em;
+  padding: 5px;
+  display: none;
+  background: lightgrey;
+  position: absolute;
+  top: 80px;
+  border-radius: $borderRadius;
+}
+
+.opposumicon {
+  width: 60px;
+}
+
+// styling for dashboard page
 
 #pubdSurveys {
   border: $borderStyle;
@@ -138,3 +165,49 @@ a {
 // i {
 //
 // }
+
+
+//  -------- Login Page Styling -----------  //
+
+.background-image {
+  position: relative;
+  width: 100%;
+}
+
+.login-ribbon {
+  color: white;
+  font-size: 4em;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  // background: hsla(360, 100%, 100%, 0.5);
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+input {
+  font-family: sans-serif;
+  color: white;
+  border: solid 3px #fff;
+  line-height: 1.5;
+  padding: 5px 10px;
+  background: transparent;
+  font-size: 0.4em;
+}
+
+//removes blue blur on focus
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+//  -------- New Author Styling -----------  //

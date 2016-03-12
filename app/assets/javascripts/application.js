@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+  // inspiration for this example came from here: http://stackoverflow.com/questions/24310046/close-toggle-box-by-clicking-anywhere-else
+  $("#downCaret").click(function() {
+    event.stopPropagation();
+  	$(".profile_dropdown").toggle();
+  });
+  $('*:not(#downCaret)').click(function(){
+    $(".profile_dropdown").hide();
+  });
+});

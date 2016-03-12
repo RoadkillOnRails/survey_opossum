@@ -1,9 +1,5 @@
 <p id="notice"><%= notice %></div>
 
-
-
-
-
 <div>
   <strong>Author:</strong>
   <%= @survey.author.name %>
@@ -20,6 +16,12 @@
 </div>
 
 <div>
-  <%= @survey.questions.question_text %>
-  <%= @survey.answers.answer %>
+  <% @questions.each do |q| %>
+      <div><%=label_tag "Question" %></div>
+      <div><%= q.question_text %></div>
+  <% end %>
+  <% @answers.each do |qq| %>
+      <div><%= label_tag "Answer" %></div>
+      <div><%= qq.answer %></div>
+  <% end %>
 </div>
