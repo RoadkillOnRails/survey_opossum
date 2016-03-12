@@ -31,16 +31,32 @@ $fontFamily: 'Raleway', sans-serif;
 .userInfo {
   float: right;
   position: relative;
+  font-family: $fontFamily;
+  padding:{
+    top: 15px;
+    right: 20px;
+  }
+}
+
+.userName {
+  margin-right: 8px;
 }
 
 .profile_dropdown {
   font-size: 1.2em;
   padding: 5px;
+  width: 171px;
   display: none;
   background: lightgrey;
   position: absolute;
-  top: 80px;
+  top: 50px;
+  left: -70px;
   border-radius: $borderRadius;
+  z-index: 1;
+}
+
+.dropdownItem {
+  padding: 5px;
 }
 
 .opposumicon {
@@ -149,6 +165,16 @@ a {
   text-decoration: none;
 }
 
+.surveyLink{
+  font-size: .8em;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.surveyShare {
+  display: inline-block;
+  margin-left: 15px;
+}
 
 .newSurvey {
   font-style: italic;
@@ -162,9 +188,6 @@ a {
 #plus {
   margin-right: 5px;
 }
-// i {
-//
-// }
 
 
 //  -------- Login Page Styling -----------  //
