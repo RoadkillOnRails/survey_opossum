@@ -10,20 +10,6 @@
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<<<<<<< HEAD
-  <div class="header">
-    <span>
-      <%= "Hi, #{Author.find(session[:user_id]).first_name}" if session[:user_id] != nil%>
-    </span>
-  </div>
-
-
-  <div class="profile_dropdown">
-    <div> <%= link_to "Edit Profile", edit_profile_path %></div>
-    <div><%=  link_to "Change Password", edit_login_path %></div>
-    <div><%= link_to "Sign Out", login_path, method: :delete %></div>
-  </div>
-=======
   <header class="header">
     <%= image_tag asset_url("roadkillpossum.jpg"), class: "opposumicon" %>
     <div class="userInfo">
@@ -39,7 +25,6 @@
       </div>
     </div>
   </header>
->>>>>>> 30684e90f9abe100aa82c811ccba881588f0b062
 <%= yield %>
 
 </body>
