@@ -19,9 +19,9 @@
       <i id="downCaret" class="fa fa-chevron-circle-down fa-2x"></i>
       <%= image_tag asset_url("opossumicon.png"), class: "opposumicon" %>
       <div class="profile_dropdown">
-        <div> <%= link_to "Edit Profile", edit_profile_path %></div>
-        <div><%=  link_to "Change Password", edit_login_path %></div>
-        <div><%= link_to "Sign Out", logout_path %></div>
+        <div> <%= link_to "Edit Profile", edit_profile_path if session[:user_id] != nil %></div>
+        <div><%=  link_to "Change Password", edit_login_path if session[:user_id] != nil %></div>
+        <div><%= link_to "Sign Out", logout_path, method: :delete %></div>
       </div>
     </div>
   </header>
