@@ -19,10 +19,9 @@
   <% @questions.each do |q| %>
       <div><%=label_tag "Question" %></div>
       <div><%= q.question_text %></div>
-      <div><% q.answers.each do |qq| %>
-        <div><%= label_tag "Answer" %></div>
-        <div><%= qq.answer %></div>
-      <% end %>
-    </div>
+  <% end %>
+  <% @answers.each do |qq| %>
+      <div><%= label_tag "Answer" %></div>
+      <div><%= qq.answer %></div>
   <% end %>
 </div>
