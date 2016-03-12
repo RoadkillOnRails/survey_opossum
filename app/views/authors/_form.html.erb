@@ -12,24 +12,24 @@
   <% end %>
 
   <div class="emailfield">
-    <%= f.label :email %><br>
-    <%= f.email_field :email %>
+    <!-- <%= f.label :email %><br> -->
+    <%= f.email_field :email, placeholder: "Email" %>
   </div>
   <% if @author.password_digest.nil? %>
     <div class="passwordfield">
-      <%= f.label :password %><br>
-      <%= f.password_field :password %>
+      <!-- <%= f.label :password %><br> -->
+      <%= f.password_field :password, placeholder: "Password" %>
     </div>
   <% end %>
   <div class="firstnamefield">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+    <!-- <%= f.label :first_name %><br> -->
+    <%= f.text_field :first_name, placeholder: "First Name" %>
   </div>
   <div class="lastnamefield">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+    <!-- <%= f.label :last_name %><br> -->
+    <%= f.text_field :last_name, placeholder: "Last Name" %>
   </div>
   <div class="submitactions">
-    <%= f.submit %>
+    <%= f.submit "Submit" %>
   </div>
 <% end %>
