@@ -32,6 +32,8 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    session[:session_id] = nil
+    blowup
     redirect_to login_path, notice: "Logged out"
   end
 

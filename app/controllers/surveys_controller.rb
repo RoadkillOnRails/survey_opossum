@@ -12,8 +12,8 @@ class SurveysController < ApplicationController
   # GET /surveys/new
   def new
     @survey = Survey.new(author_id: session[:user_id])
-    @question.options.build
-    @question.answers.build
+    @survey = question.options
+    @survey = question.answers
   end
 
   # GET /surveys/1/edit
