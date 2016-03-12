@@ -7,13 +7,11 @@ class QuestionaireController < ApplicationController
   end
 
   def create
-    @survey = Survey.new(survey_params)
-
-    if @survey.save
-      redirect_to questionaire_show_path, notice: 'Author was successfully created.'
+    @survey = Survey.find(survey_params[:id])
+    # byebug
+    if @survey.update(survey_params)
+      redirect_to questionaire_show_path, notice: 'Survey was successfully taken.'
     else
-      question = @survey.questions.build
-      question.answers.build
       render :new
     end
   end
@@ -25,7 +23,7 @@ class QuestionaireController < ApplicationController
   end
 
   private def survey_params
-    params.require(:survey).permit(:id, questions_attributes: [:id, answer_attributes: [:id, :answer, :_destroy]])
+    params.require(:survey).permit(:id, questions_attributes: [:id, answers_attributes: [:id, :answer, :_destroy]])
   end
 
 end

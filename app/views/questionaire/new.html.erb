@@ -2,12 +2,25 @@
 
 <div>
   <%= form_for(@survey, url: questionaire_create_path) do |f| %>
+    <% if @survey.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
+
+        <ul>
+        <% @survey.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
     <div>
+        <%= f.hidden_field :id %>
         <%= f.fields_for :questions do |ff| %>
           <div>
+            <%= ff.hidden_field :id %>
             <%= ff.text_field :question_text %>
-            <% ff.object.answers.build %>
-            <%= ff.fields_for :answers do |fff| %>
+            <%= ff.fields_for :answers, ff.object.answers.build do |fff| %>
               <div>
                 <% case ff.object.question_type.category %>
                   <% when "Short" %>
