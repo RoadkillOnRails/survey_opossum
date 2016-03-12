@@ -10,6 +10,10 @@
           <div class="unpubButton"><%= link_to 'Unpublish', unpublish_path(survey), method: :patch %></div>
           <div class="deleteButton"><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure?' } %></div>
         </div>
+        <div class="surveyShare">
+          <i id="shareIcon" class="fa fa-share-square"></i>
+          <div class="surveyLink">www.surveyoppossum.com/unique+survey+token</div>
+        </div>
       </div>
     <% end %>
   </div>
