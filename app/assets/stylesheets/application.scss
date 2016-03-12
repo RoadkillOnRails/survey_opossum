@@ -165,6 +165,16 @@ a {
   text-decoration: none;
 }
 
+.surveyLink{
+  font-size: .8em;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.surveyShare {
+  display: inline-block;
+  margin-left: 15px;
+}
 
 .newSurvey {
   font-style: italic;
@@ -178,9 +188,6 @@ a {
 #plus {
   margin-right: 5px;
 }
-// i {
-//
-// }
 
 
 //  -------- Login Page Styling -----------  //
