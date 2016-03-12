@@ -3,25 +3,25 @@
 <div>
   <%= form_for(@survey, url: questionaire_create_path) do |f| %>
     <div>
-      <% @survey.questions.order(:order).each do |q| %>
+      <% @survey.questions.order(:order).each do |question| %>
         <div>
-          <%= f.fields_for q do |ff| %>
+          <%= f.fields_for :questions do |ff| %>
             <%= ff.text_field :question_text %>
             <%= ff.fields_for :answers do |fff| %>
               <div>
-                <% case q.question_type %>
+                <% case question.question_type.category %>
                   <% when "Short" %>
                     <%= fff.text_field :answer, placeholder: "Answer" %>
                   <% when "Long" %>
                     <%= fff.text_area :answer, placeholder: "Answer" %>
                   <% when "YesNo" %>
-                    <% q.options.each do |o| %>
+                    <% question.options.each do |o| %>
                       <% if o.option %>
                         <%= fff.label :answer_option, o.option %>
-                        <%= fff.radio :answer, value: o.value %>
+                        <%= fff.radio_button :answer, o.value %>
                       <% else %>
                         <%= fff.label :answer_option, o.value %>
-                        <%= fff.radio :answer, value: o.value %>
+                        <%= fff.radio_button :answer, o.value %>
                       <% end %>
                     <% end %>
                 <% end %>
@@ -31,6 +31,8 @@
         </div>
       <% end %>
     </div>
-    <% f.submit %>
+    <div>
+      <%= f.submit %>
+    </div>
   <% end %>
 </div>

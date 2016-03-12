@@ -19,8 +19,8 @@ if Rails.env.development?
     Question.create(question_type_id: 1, survey_id: i % 10 + 1, question_text: Faker::Hacker.say_something_smart, description: Faker::Hipster.paragraph(2), required: rand(2), order: i / 10 * 3 + 1)
     Question.create(question_type_id: 2, survey_id: i % 10 + 1, question_text: Faker::Hacker.say_something_smart, description: Faker::Hipster.paragraph(2), required: rand(2), order: i / 10 * 3 + 2)
     Question.create(question_type_id: 3, survey_id: i % 10 + 1, question_text: Faker::Hacker.say_something_smart, description: Faker::Hipster.paragraph(2), required: rand(2), order: i / 10 * 3 + 3)
-    Option.create(question_id: i / 10 * 3 + 3, option: Faker::Book.title, value: Faker::Book.genre)
-    Option.create(question_id: i / 10 * 3 + 3, option: Faker::Book.title, value: Faker::Book.genre)
+    Option.create(question_id: (i + 1) * 3, option: Faker::Book.title, value: Faker::Book.genre)
+    Option.create(question_id: (i + 1) * 3, option: Faker::Book.title, value: Faker::Book.genre)
   end
 end
 
