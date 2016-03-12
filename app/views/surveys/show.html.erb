@@ -1,9 +1,5 @@
 <p id="notice"><%= notice %></div>
 
-
-
-
-
 <div>
   <strong>Author:</strong>
   <%= @survey.author.name %>
@@ -18,12 +14,15 @@
   <strong>Description:</strong>
   <%= @survey.description %>
 </div>
-<br>
+
 <div>
-  <% @survey.questions.each do |q| %>
-    <tr>
-      <td><%= q.question_text %></td>
-      <td><%= q.answers.answer %></td>
-    </tr>
+  <% @questions.each do |q| %>
+      <div><%=label_tag "Question" %></div>
+      <div><%= q.question_text %></div>
+      <div><% q.answers.each do |qq| %>
+        <div><%= label_tag "Answer" %></div>
+        <div><%= qq.answer %></div>
+      <% end %>
+    </div>
   <% end %>
 </div>

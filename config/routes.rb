@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
-  delete 'login' => 'sessions#destroy'
+  delete 'login' => 'sessions#destroy', as: :logout
   get 'login/edit' => 'sessions#edit', as: :edit_login
   patch 'login' => 'sessions#update'
   put 'login' => 'sessions#update'
@@ -20,7 +20,8 @@ Rails.application.routes.draw do
   get 'profile' => 'authors#edit', as: :edit_profile
   patch 'profile' => 'authors#update', as: :author
 
-  resources :surveys, except: [:index]
+  get 'surveys/:token' => 'surveys#show', as: :show_surveys
+  resources :surveys, except: [:index, :show]
   patch 'publish/:id' => 'surveys#publish', as: :publish
   patch 'unpublish/:id' => 'surveys#unpublish', as: :unpublish
   # The priority is based upon order of creation: first created -> highest priority.
