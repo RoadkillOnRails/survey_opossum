@@ -11,25 +11,25 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="emailfield">
     <%= f.label :email %><br>
     <%= f.email_field :email %>
   </div>
   <% if @author.password_digest.nil? %>
-    <div class="field">
+    <div class="passwordfield">
       <%= f.label :password %><br>
       <%= f.password_field :password %>
     </div>
   <% end %>
-  <div class="field">
+  <div class="firstnamefield">
     <%= f.label :first_name %><br>
     <%= f.text_field :first_name %>
   </div>
-  <div class="field">
+  <div class="lastnamefield">
     <%= f.label :last_name %><br>
     <%= f.text_field :last_name %>
   </div>
-  <div class="actions">
+  <div class="submitactions">
     <%= f.submit %>
   </div>
 <% end %>
