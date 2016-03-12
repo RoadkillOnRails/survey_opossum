@@ -28,11 +28,8 @@ class QuestionaireController < ApplicationController
   def notfound
   end
 
-<<<<<<< HEAD
   private def survey_params
     params.require(:survey).permit(:id, questions_attributes: [:id, answer_attributes: [:id, :answer, :_destroy]])
   end
-=======
-  
->>>>>>> 30684e90f9abe100aa82c811ccba881588f0b062
+
 end
