@@ -5,8 +5,8 @@
     <div>
       <% @survey.questions.order(:order).each do |question| %>
         <div>
+          <%= text_field_tag :question, question.question_text, readonly: true %>
           <%= f.fields_for :questions do |ff| %>
-            <%= ff.text_field :question_text %>
             <%= ff.fields_for :answers do |fff| %>
               <div>
                 <% case question.question_type.category %>
