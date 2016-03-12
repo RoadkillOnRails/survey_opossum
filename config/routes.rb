@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get 'profile' => 'authors#edit', as: :edit_profile
   patch 'profile' => 'authors#update', as: :author
 
+  
   resources :surveys, except: [:index]
   patch 'publish/:id' => 'surveys#publish', as: :publish
   patch 'unpublish/:id' => 'surveys#unpublish', as: :unpublish

@@ -22,7 +22,16 @@ if Rails.env.development?
     Option.create(question_id: i / 10 * 3 + 3, option: Faker::Book.title, value: Faker::Book.genre)
     Option.create(question_id: i / 10 * 3 + 3, option: Faker::Book.title, value: Faker::Book.genre)
   end
+
+  5.times do |a|
+    Answer.create(question_id: (a * 30 +4), answer: Faker::Hacker.say_something_smart, taker_id: rand(1..10))
+    Answer.create(question_id: (a * 30 +5), answer: Faker::Hacker.say_something_smart, taker_id: rand(1..10))
+    Answer.create(question_id: (a * 30 +6), answer: Faker::Hacker.say_something_smart, taker_id: rand(1..10))
+  end
 end
+
+
+
 
 QuestionType.create(category: "Short")
 QuestionType.create(category: "Long")

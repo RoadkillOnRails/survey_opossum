@@ -12,7 +12,7 @@ class Question < ActiveRecord::Base
       reject_if: :all_blank,
       allow_destroy: true
 
-  accepts_nested_attributes_for :options,
+  accepts_nested_attributes_for :answers,
       reject_if: :all_blank,
       allow_destroy: true
 end
