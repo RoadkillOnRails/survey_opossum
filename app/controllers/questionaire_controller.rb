@@ -4,10 +4,6 @@ class QuestionaireController < ApplicationController
     unless @survey
       redirect_to questionaire_notfound_path
     end
-    # @questions = @survey.questions
-    # answer = @question.answers.build
-    questions = @survey.questions.build
-    answers = questions.answers.build
   end
 
   def create

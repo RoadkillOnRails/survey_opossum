@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'questionaire/:token/new' => 'questionaire#new'
+  get 'questionaire/:token/new' => 'questionaire#new', as: :questionaire
   patch 'questionaire/create'
   get 'questionaire/show'
   get 'questionaire/notfound'

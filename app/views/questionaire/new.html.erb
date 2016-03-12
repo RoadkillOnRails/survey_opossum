@@ -3,19 +3,19 @@
 <div>
   <%= form_for(@survey, url: questionaire_create_path) do |f| %>
     <div>
-      <% @survey.questions.order(:order).each do |question| %>
-        <div>
-          <%= text_field_tag :question, question.question_text, readonly: true %>
-          <%= f.fields_for :questions do |ff| %>
+        <%= f.fields_for :questions do |ff| %>
+          <div>
+            <%= ff.text_field :question_text %>
+            <% ff.object.answers.build %>
             <%= ff.fields_for :answers do |fff| %>
               <div>
-                <% case question.question_type.category %>
+                <% case ff.object.question_type.category %>
                   <% when "Short" %>
                     <%= fff.text_field :answer, placeholder: "Answer" %>
                   <% when "Long" %>
                     <%= fff.text_area :answer, placeholder: "Answer" %>
                   <% when "YesNo" %>
-                    <% question.options.each do |o| %>
+                    <% ff.object.options.each do |o| %>
                       <% if o.option %>
                         <%= fff.label :answer_option, o.option %>
                         <%= fff.radio_button :answer, o.value %>
@@ -27,9 +27,8 @@
                 <% end %>
               </div>
             <% end %>
-          <% end %>
-        </div>
-      <% end %>
+          </div>
+        <% end %>
     </div>
     <div>
       <%= f.submit %>
