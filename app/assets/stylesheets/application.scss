@@ -266,7 +266,7 @@ button:focus {
       line-height: 1.5;
       padding: 5px 10px;
       background: transparent;
-      font-size: 0.8em;
+      font-size: 1em;
       margin-top: 5px;
       border: solid 2px lightgray;
     }
@@ -276,4 +276,24 @@ button:focus {
   font-family: "Raleway", sans-serif;
   font-size: 2em;
   text-align: center;
+}
+
+// ----- Change password Page ------
+.change-pw-label {
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+.change-pw {
+  text-align: center;
+  input {
+    font-family: sans-serif;
+    line-height: 1.5;
+    padding: 5px 10px;
+    background: transparent;
+    font-size: 1em;
+    margin-top: 5px;
+    border: solid 2px lightgray;
+  }
 }
