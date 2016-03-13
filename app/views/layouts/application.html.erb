@@ -20,7 +20,7 @@
       <div class="profile_dropdown">
         <div class="dropdownItem"> <%= link_to "Edit Profile", edit_profile_path %></div>
         <div class="dropdownItem"><%=  link_to "Change Password", edit_login_path %></div>
-        <div class="dropdownItem"><%= link_to "Sign Out", logout_path %></div>
+        <div class="dropdownItem"><%= link_to "Sign Out", logout_path, method: :delete %></div>
       </div>
     </div>
   </header>
