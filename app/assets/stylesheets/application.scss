@@ -187,22 +187,22 @@ a {
   width: 40%;
   margin-left: 30%;
   margin-right: 30%;
+  input {
+    font-family: sans-serif;
+    color: white;
+    border: solid 3px #fff;
+    line-height: 1.5;
+    padding: 5px 10px;
+    background: transparent;
+    font-size: 0.4em;
+  }
 }
 
 h2 {
   font-size: 2em;
 }
 
-input {
-  font-family: sans-serif;
-  color: white;
-  // border: solid 3px #fff;
-  border: solid 3px gray;
-  line-height: 1.5;
-  padding: 5px 10px;
-  background: transparent;
-  font-size: 0.4em;
-}
+
 
 //removes blue blur on focus of all following elements
 input:focus,
