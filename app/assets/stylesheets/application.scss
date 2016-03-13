@@ -16,16 +16,27 @@
  *= require reset
  */
 
-$borderStyle: solid 2px black;
+$borderStyle: solid 2px lightgrey;
 $borderRadius: 3px;
 $fontFamily: 'Raleway', sans-serif;
+
+$blueaccent: #3CA3E8;
+$greenaccent: #00A676;
+$deletecolor: #FF101F;
 
 // styling for header
 
 .header {
-  margin-bottom: 20px;
-  background-color: lightgrey;
+  margin-bottom: 75px;
+  background-color: #555444;
   padding: 10px;
+}
+
+.app-name {
+  color: white;
+  display: inline;
+  font-family: $fontFamily;
+  font-size: 2em;
 }
 
 .userInfo {
@@ -40,6 +51,7 @@ $fontFamily: 'Raleway', sans-serif;
 
 .userName {
   margin-right: 8px;
+  font-size: 1.5em;
 }
 
 .profile_dropdown {
@@ -47,12 +59,15 @@ $fontFamily: 'Raleway', sans-serif;
   padding: 5px;
   width: 171px;
   display: none;
-  background: lightgrey;
+  background: #555444;
   position: absolute;
   top: 50px;
   left: -70px;
   border-radius: $borderRadius;
   z-index: 1;
+    a {
+      color: black;
+    }
 }
 
 .dropdownItem {
@@ -75,6 +90,9 @@ $fontFamily: 'Raleway', sans-serif;
   margin-left: 4%;
   float: left;
   font-family: $fontFamily;
+    a {
+      color: white;
+    }
 }
 
 #savedSurveys {
@@ -86,6 +104,9 @@ $fontFamily: 'Raleway', sans-serif;
   width: 45%;
   margin-left: 1%;
   font-family: $fontFamily;
+  a {
+    color: white;
+  }
 }
 
 .divTitle {
@@ -147,14 +168,22 @@ $fontFamily: 'Raleway', sans-serif;
 .fa-bar-chart, .unpubButton, .deleteButton, .pubButton, .editButton{
   display: inline;
   // float: right;
-  padding: 2px;
-  border: $borderStyle;
+  padding: 5px;
+  // border: $borderStyle;
   border-radius: $borderRadius;
   font-weight: bolder;
   margin:{
     right: 5px;
     bottom: 5px;
   }
+}
+
+.deleteButton {
+  background: $deletecolor;
+}
+
+.unpubButton, .pubButton, .editButton, .divTitle {
+  background: $blueaccent;
 }
 
 .fa-bar-chart {
