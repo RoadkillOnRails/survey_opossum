@@ -20,8 +20,8 @@ Rails.application.routes.draw do
   get 'profile' => 'authors#edit', as: :edit_profile
   patch 'profile' => 'authors#update', as: :author
 
-
-  resources :surveys, except: [:index]
+  get 'surveys/:token/show' => 'surveys#show', as: :survey
+  resources :surveys, except: [:index, :show]
   patch 'publish/:id' => 'surveys#publish', as: :publish
   patch 'unpublish/:id' => 'surveys#unpublish', as: :unpublish
   # The priority is based upon order of creation: first created -> highest priority.
