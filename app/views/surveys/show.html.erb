@@ -27,8 +27,8 @@
         </div>
 
         <div class = "answer-text">
-          <div><%= label_tag "Answer" %></div>
           <div><% q.answers.each do |qq| %></div>
+            <div><%= label_tag "Answer" %></div>
             <div><%= qq.answer %></div>
         </div>
       </div>
