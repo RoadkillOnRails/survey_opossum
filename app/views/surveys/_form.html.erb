@@ -23,14 +23,19 @@
 
   <%= f.fields_for :questions do |ff| %>
     <div>
-      <%= ff.number_field :order %>
-      <%= ff.collection_select(:question_type_id, QuestionType.all, :id, :category) %>
-      <%= ff.text_field :question_text %>
-      <%= ff.text_area :description %>
-      <%= ff.check_box :required %>
+      <%= ff.label :order %>
+      <%= ff.number_field :order %><br>
+      <%= ff.label :question_type_id %>
+      <%= ff.collection_select(:question_type_id, QuestionType.all, :id, :category) %><br>
+      <%= ff.label :question_text %>
+      <%= ff.text_field :question_text %><br>
+      <%= ff.label :required %>
+      <%= ff.check_box :required %><br>
       <%= ff.link_to_remove "Remove this task" %>
       <%= ff.fields_for :options do |fff| %>
+        <%= fff.label :option %>
         <%= fff.text_field :option %>
+        <%= fff.label :value %>
         <%= fff.text_field :value %>
       <% end %>
     </div>
