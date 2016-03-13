@@ -30,7 +30,7 @@ $(function() {
 //Show header on all but signup and login
 
 $(function() {
-  if (window.location.pathname == "/login"){
+  if (window.location.pathname == "/login"||window.location.pathname.match(/^\/signup./)){
             $('header').hide();
       } else {
             $('header').show();
