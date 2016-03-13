@@ -11,7 +11,7 @@
           <div class="deleteButton"><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure?' } %></div>
         </div>
         <div class="surveyShare">
-          <i id="shareIcon" class="fa fa-share-square"></i>
+          <i id="shareIcon" class="fa fa-share-square"><%= link_to "Show", survey_path(survey), method: :get %></i>
           <div class="surveyLink"><%= questionaire_url(survey.token) %></div>
         </div>
       </div>
