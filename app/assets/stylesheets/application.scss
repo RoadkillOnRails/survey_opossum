@@ -249,9 +249,9 @@ button:focus {
   top: 200px;
   color: white;
   font-family: "Raleway", sans-serif;
-  width: 40%;
-  margin-left: 30%;
-  margin-right: 30%;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
   font-size: 4em;
 }
 
@@ -264,7 +264,59 @@ button:focus {
   position: absolute;
   top: 260px;
   left: 0;
-  width: 40%;
-  margin-left: 30%;
-  margin-right: 30%;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+    input {
+      margin-top: 15px;
+      font-family: sans-serif;
+      color: white;
+      border: solid 3px #fff;
+      line-height: 1.5;
+      padding: 5px 10px;
+      background: transparent;
+      font-size: 0.8em;
+    }
+}
+
+// --------- View/Edit Profile Page ---------
+// localhost:3000/profile
+
+.edit_author {
+  text-align: center;
+    input {
+      font-family: sans-serif;
+      line-height: 1.5;
+      padding: 5px 10px;
+      background: transparent;
+      font-size: 1em;
+      margin-top: 5px;
+      border: solid 2px lightgray;
+    }
+}
+
+.edit-profile {
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+// ----- Change password Page ------
+.change-pw-label {
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+.change-pw {
+  text-align: center;
+  input {
+    font-family: sans-serif;
+    line-height: 1.5;
+    padding: 5px 10px;
+    background: transparent;
+    font-size: 1em;
+    margin-top: 5px;
+    border: solid 2px lightgray;
+  }
 }

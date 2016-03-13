@@ -1,12 +1,14 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 <p id="alert"><%= alert %></p>
 
-<h1>Change Password</h1>
+<h1 class = "change-pw-label">Change Password</h1>
+<div class = "change-pw">
 <%= form_tag login_path, method: "PUT" do %>
   <%= form_for :form_fields do |ff| %>
     <p><%= ff.email_field :email, {value: @author.email, readonly: true }%></p>
     <p><%= ff.password_field :password, placeholder: "Old Password" %></p>
     <p><%= ff.password_field :new_password, placeholder: "New Password" %></p>
-    <%= submit_tag "Change Password" %>
+    <%= submit_tag "Submit" %>
   <% end %>
 <% end %>
+</div>
