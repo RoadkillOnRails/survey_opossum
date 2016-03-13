@@ -15,6 +15,6 @@
   <p class = "signup"><%= password_field_tag :password, nil, placeholder: "Password" %></p>
   <%= submit_tag "Login" %>
 
-  <div><%= link_to "New? Create an account.", signup_path(session), method: :get %></div>
+  <div class = "create-new"><%= link_to "New? Create an account.", signup_path(session), method: :get %></div>
 <% end %>
 </div>

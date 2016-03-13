@@ -225,6 +225,15 @@ h2 {
   font-size: 2em;
 }
 
+.create-new {
+  margin-top: 220px;
+  text-decoration: none;
+  color: white;
+  a:link, a:visited {
+    color: white;
+    font-size: 0.5em;
+  }
+}
 
 
 //removes blue blur on focus of all following elements
