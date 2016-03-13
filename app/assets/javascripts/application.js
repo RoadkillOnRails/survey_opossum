@@ -26,3 +26,13 @@ $(function() {
     $(".profile_dropdown").hide();
   });
 });
+
+//Show header on all but signup and login
+
+// $(function() {
+//   if (window.location.pathname === "path name here"||window.location.pathname === "second path name"{
+//             $('header').hide();
+//       } else {
+//             $('header').show();
+//       }
+// })
