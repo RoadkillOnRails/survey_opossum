@@ -29,10 +29,10 @@ $(function() {
 
 //Show header on all but signup and login
 
-// $(function() {
-//   if (window.location.pathname === "path name here"||window.location.pathname === "second path name"{
-//             $('header').hide();
-//       } else {
-//             $('header').show();
-//       }
-// })
+$(function() {
+  if (window.location.pathname == "/login"){
+            $('header').hide();
+      } else {
+            $('header').show();
+      }
+});
