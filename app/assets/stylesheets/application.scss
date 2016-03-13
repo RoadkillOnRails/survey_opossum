@@ -335,3 +335,27 @@ button:focus {
     border: solid 2px lightgray;
   }
 }
+
+// ------- Show survey AKA the taker's view ------
+
+.survey-contents {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: sans-serif;
+    .title-name {
+      margin-bottom: 15px;
+      font-family: "Raleway", sans-serif;
+      font-size: 2em;
+    }
+    .question-answer{
+      margin-bottom: 45px;
+    }
+    .question-text, .answer-text {
+      margin-top: 10px;
+    }
+}
+
+.question-contents {
+  margin-top: 40px;
+}
