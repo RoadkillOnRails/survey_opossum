@@ -6,7 +6,7 @@ class SurveysController < ApplicationController
   def show
     @survey = Survey.find_by(token: params[:token])
     @questions = @survey.questions
-    # @answers = @questions.answers
+    @answers = @survey.answers.order(:question_id)
   end
 
   # GET /surveys/new
