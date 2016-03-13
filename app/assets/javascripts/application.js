@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery_nested_form
 
 $(function() {
   // inspiration for this example came from here: http://stackoverflow.com/questions/24310046/close-toggle-box-by-clicking-anywhere-else

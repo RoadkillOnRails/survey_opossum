@@ -6,6 +6,7 @@ ruby '2.3.0'
 gem 'reset_css_rails', '~> 1.1'
 gem 'puma'
 gem 'font-awesome-rails'
+gem "nested_form"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use sqlite3 as the database for Active Record

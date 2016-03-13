@@ -23,7 +23,7 @@
   <h2 class="divTitle">Surveys in Progress</h2>
   <div class="savedSurveyList">
     <div class="noSavedSurveys">You haven't started any new surveys</div>
-    <div class="newSurvey"><i id="plus" class="fa fa-plus-square"><%= link_to '', new_survey_path %></i>Create a New Survey</div>
+    <a href="<%= new_survey_path %>"><div class="newSurvey"><i id="plus" class="fa fa-plus-square"></i>Create a New Survey</div></a>
       <% @unpublished_surveys.each do |survey| %>
         <div class="survey">
           <div class="surveyName"><%= survey.title %></div>
