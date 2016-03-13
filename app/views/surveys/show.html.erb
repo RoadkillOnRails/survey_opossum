@@ -1,27 +1,39 @@
 <p id="notice"><%= notice %></div>
 
-<div>
-  <strong>Author:</strong>
-  <%= @survey.author.name %>
-</div>
+<div class = "survey-contents">
+  <!-- <div class = "author-name">
+    <strong>Author:</strong>
+    <%= @survey.author.name %>
+  </div> -->
 
-<div>
-  <strong>Title:</strong>
-  <%= @survey.title %>
-</div>
+  <div class = "title-name">
+    <%= @survey.title %>
+  </div>
 
-<div>
-  <strong>Description:</strong>
-  <%= @survey.description %>
-</div>
+  <div class = "description-name">
+    <strong>Description:</strong>
+    <%= @survey.description %>
+  </div>
 
-<div>
-  <% @questions.each do |q| %>
-      <div><%=label_tag "Question" %></div>
-      <div><%= q.question_text %></div>
-      <div><%= label_tag "Answer" %></div>
-      <div><% q.answers.each do |qq| %></div>
-        <div><%= qq.answer %></div>
-      <% end %>
-  <% end %>
+
+
+  <div class = "question-contents">
+    <% @questions.each do |q| %>
+
+      <div class = "question-answer">
+        <div class = "question-text">
+          <div><%=label_tag "Question" %></div>
+          <div><%= q.question_text %></div>
+        </div>
+
+        <div class = "answer-text">
+          <div><% q.answers.each do |qq| %></div>
+            <div><%= label_tag "Answer" %></div>
+            <div><%= qq.answer %></div>
+        </div>
+      </div>
+        <% end %>
+    <% end %>
+  </div>
+
 </div>

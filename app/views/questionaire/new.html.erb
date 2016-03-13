@@ -19,7 +19,8 @@
         <%= f.fields_for :questions do |ff| %>
           <div>
             <%= ff.hidden_field :id %>
-            <%= ff.text_field :question_text %>
+            <% ff.text_field :question_text %>
+            <%= ff.object.question_text %>
             <%= ff.fields_for :answers, ff.object.answers.build do |fff| %>
               <div>
                 <%= fff.hidden_field :taker_id, value: @taker.id %>
