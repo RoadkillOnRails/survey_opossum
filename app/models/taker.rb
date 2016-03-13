@@ -1,6 +1,5 @@
 class Taker < ActiveRecord::Base
-  have_many :answers
-  before_create :token_create
+  has_many :answers
 
   def token_create
     self.token = SecureRandom.urlsafe_base64

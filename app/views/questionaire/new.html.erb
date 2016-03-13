@@ -22,6 +22,7 @@
             <%= ff.text_field :question_text %>
             <%= ff.fields_for :answers, ff.object.answers.build do |fff| %>
               <div>
+                <%= fff.hidden_field :taker_id, value: @taker.id %>
                 <% case ff.object.question_type.category %>
                   <% when "Short" %>
                     <%= fff.text_field :answer, placeholder: "Answer" %>

@@ -4,6 +4,8 @@ class QuestionaireController < ApplicationController
     unless @survey
       redirect_to questionaire_notfound_path
     end
+    @taker = Taker.create
+    @taker.token_create
   end
 
   def create
@@ -12,6 +14,7 @@ class QuestionaireController < ApplicationController
     if @survey.update(survey_params)
       redirect_to questionaire_show_path, notice: 'Survey was successfully taken.'
     else
+      @taker = Taker.find(survey_params[:questions_attributes]["0"][:answers_attributes]["0"][:taker_id])
       render :new
     end
   end
@@ -23,7 +26,7 @@ class QuestionaireController < ApplicationController
   end
 
   private def survey_params
-    params.require(:survey).permit(:id, questions_attributes: [:id, answers_attributes: [:id, :answer, :_destroy]])
+    params.require(:survey).permit(:id, questions_attributes: [:id, answers_attributes: [:id, :answer, :taker_id, :_destroy]])
   end
 
 end
