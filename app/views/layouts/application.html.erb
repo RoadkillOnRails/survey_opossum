@@ -6,31 +6,32 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
-<body>
-  <header class="header">
-    <%= image_tag asset_url("possum-vector-white.png"), class: "opposumicon" %>
+  <body>
+
+    <header class="header">
+      <div class="appInfo">
+
+        <a href="<%= root_path %>"><%= image_tag asset_url("possum-vector-white.png"), class: "opposumicon" %></a>
 
 
-
-    <div class="userInfo">
-      <div class = "app-name">Survey Opossum</div>
-      <span class="userName">
-        <%= p "Hi, #{Author.find(session[:user_id]).first_name}" if session[:user_id] != nil %>
-      </span>
-      <i id="downCaret" class="fa fa-chevron-circle-down fa-2x"></i>
-      <div class="profile_dropdown">
-        <div class="dropdownItem"> <%= link_to "Edit Profile", edit_profile_path %></div>
-        <div class="dropdownItem"><%=  link_to "Change Password", edit_login_path %></div>
-
-        <div class="dropdownItem"><%= link_to "Sign Out", logout_path, method: :delete %></div>
-
+        <div class = "app-name">Survey Opossum</div>
       </div>
-    </div>
-  </header>
-<%= yield %>
+      <div class="userInfo">
+        <!-- <div class = "app-name">Survey Opossum</div> -->
+        <span class="userName">
+          <%= p "Hi, #{Author.find(session[:user_id]).first_name}" if session[:user_id] != nil %>
+        </span>
+        <i id="downCaret" class="fa fa-chevron-circle-down fa-2x"></i>
+        <div class="profile_dropdown">
+          <div class="dropdownItem"> <%= link_to "Edit Profile", edit_profile_path %></div>
+          <div class="dropdownItem"><%=  link_to "Change Password", edit_login_path %></div>
+          <div class="dropdownItem"><%= link_to "Sign Out", logout_path, method: :delete %></div>
+        </div>
+      </div>
+    </header>
+  <%= yield %>
 
-</body>
+  </body>
 </html>
