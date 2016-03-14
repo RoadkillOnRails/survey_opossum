@@ -10,9 +10,9 @@
           <div class="unpubButton"><%= link_to 'Unpublish', unpublish_path(survey), method: :patch %></div>
           <div class="deleteButton"><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure?' } %></div>
         </div>
-        <div class="surveyShare" title="Click to copy to clipboard">
-          <i id="shareIcon" class="fa fa-share-square"></i>
-          <div class="surveyLink"><%= questionaire_url(survey.token) %></div>
+        <div class="surveyShare" title="Use this URL to share your survey">
+          <div class="shareIcon">SHARE: </div>
+          <div class="surveyLink" id=""><%= questionaire_url(survey.token) %></div>
         </div>
       </div>
     <% end %>

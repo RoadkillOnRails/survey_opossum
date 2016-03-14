@@ -132,8 +132,8 @@ $fontFamily: 'Raleway', sans-serif;
   font-size: 1.5em;
   padding-left: 5px;
   width: 300px;
-  height: 35px;
-  line-height: 35px;
+  height: 30px;
+  line-height: 30px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -165,15 +165,22 @@ a {
   text-decoration: none;
 }
 
+.surveyShare {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+
+.shareIcon {
+  font-size: .8em;
+  font-weight: bolder;
+  display: inline-block;
+}
+
 .surveyLink{
   font-size: .8em;
   margin-left: 5px;
   display: inline-block;
-}
-
-.surveyShare {
-  display: inline-block;
-  margin-left: 15px;
 }
 
 .newSurvey {
