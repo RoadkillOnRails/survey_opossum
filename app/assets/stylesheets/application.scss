@@ -470,6 +470,12 @@ button:focus {
   margin-right: 10%;
   padding: 20px;
   font-family: sans-serif;
+  select {
+    border: $borderStyle;
+  }
+  div {
+    padding-bottom: 20px;
+  }
 }
 
 .new-survey-title {
@@ -482,6 +488,7 @@ button:focus {
   margin-right: 10%;
   background: white;
 }
+
 
 // -------- Are you sure delete modal --------
 
