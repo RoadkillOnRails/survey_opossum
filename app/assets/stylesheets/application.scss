@@ -20,8 +20,8 @@ $borderStyle: solid 2px lightgrey;
 $borderRadius: 3px;
 $fontFamily: 'Raleway', sans-serif;
 
-$blueaccent: #3CA3E8;
-$greenaccent: #00A676;
+$blueaccent: #2d798d;
+$greenaccent: #223127;
 $deletecolor: #FF101F;
 
 // styling for header
@@ -30,14 +30,15 @@ $deletecolor: #FF101F;
   margin-bottom: 75px;
   background-color: #555444;
   padding: 10px;
+  .app-name {
+    color: white;
+    display: inline;
+    font-family: $fontFamily;
+    font-size: 2em;
+    padding-bottom: 15px;
+  }
 }
 
-.app-name {
-  color: white;
-  display: inline;
-  font-family: $fontFamily;
-  font-size: 2em;
-}
 
 .userInfo {
   float: right;
@@ -93,6 +94,9 @@ $deletecolor: #FF101F;
     a {
       color: white;
     }
+    i {
+      color: black;
+    }
 }
 
 #savedSurveys {
@@ -112,7 +116,8 @@ $deletecolor: #FF101F;
 .divTitle {
   border-bottom: $borderStyle;
   text-align: center;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   font-size: 2em;
 }
 
@@ -179,7 +184,7 @@ $deletecolor: #FF101F;
 }
 
 .deleteButton {
-  background: $deletecolor;
+  background: #555444;
 }
 
 .unpubButton, .pubButton, .editButton, .divTitle {
