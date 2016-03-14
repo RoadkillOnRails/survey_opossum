@@ -1,4 +1,8 @@
-<h1>questionnaire not found</h1>
+<%= image_tag asset_url("file_not_found.jpg"), class: "questionnaire-image" %>
 
-</div><%= link_to "Sign Up", signup_path %></div>
-<div><%= link_to 'Login', login_path %></div>
+<div class="not-found">
+  <h1> Questionnaire not found</h1>
+</div>
+
+<div class="not-found-link"><%= link_to "Sign Up", signup_path %><br>
+<%= link_to 'Login', login_path %></div>
