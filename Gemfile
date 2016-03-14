@@ -10,7 +10,7 @@ gem "nested_form"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -48,6 +48,7 @@ group :development, :test do
   gem 'faker'
   gem 'railroady'
   gem 'rails-footnotes', '~> 4.0'
+  gem 'sqlite3'
 end
 
 group :development do
