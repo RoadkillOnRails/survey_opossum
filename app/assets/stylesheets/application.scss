@@ -552,6 +552,9 @@ button:focus {
 }
 
 .thank-link {
+  a, a:visited {
+    color:white;
+  }
   color: white;
   font-size: 4em;
   font-family: "Raleway", sans-serif;
@@ -625,4 +628,29 @@ button:focus {
     background: transparent;
     font-size: 0.4em;
   }
+}
+
+// --------- Survey Takers ----------
+
+.new-survey-content {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  background: white;
+  border: $borderStyle;
+    div {
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+    textarea {
+      width: 50%;
+    }
+    .req-question {
+      font-family: sans-serif;
+      padding-bottom: 20px;
+      padding-left: 20px;
+    }
+    select {
+      border: $borderStyle;
+    }
 }
