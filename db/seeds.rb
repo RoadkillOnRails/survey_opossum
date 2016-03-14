@@ -35,4 +35,5 @@ end
 
 QuestionType.create(category: "Short")
 QuestionType.create(category: "Long")
-QuestionType.create(category: "YesNo")
+QuestionType.create(category: "Radio")
+QuestionType.create(category: "DropDown")
