@@ -6,9 +6,9 @@
       <div class="survey">
         <div class="surveyName"><%= survey.title %></div>
         <div class="surveyActions">
-          <a href="<%= survey_path(survey.token)%>"><i class="fa fa-bar-chart"></i></a>
+          <a href="<%= show_survey_path(survey.token)%>"><i class="fa fa-bar-chart"></i></a>
           <div class="unpubButton"><%= link_to 'Unpublish', unpublish_path(survey), method: :patch %></div>
-          <div class="deleteButton"><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+          <div class="deleteButton">Delete survey</div>
         </div>
         <div class="surveyShare" title="Use this URL to share your survey">
           <div class="shareIcon">SHARE: </div>
@@ -30,20 +30,21 @@
           <div class="surveyActions">
             <div class="editButton"><%= link_to 'Edit', edit_survey_path(survey) %></div>
             <div class="pubButton"><%= link_to 'Publish', publish_path(survey), method: :patch %></div>
-            <div class="deleteButton"><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+            <div class="deleteButton">Delete survey</div>
           </div>
         </div>
-      <% end %>
-  </div>
-</div>
 
-<div class = "deleteModal">
-  <div class = "modal-content">
-    <h1 class = "modal-header">Are you sure?</h1>
-    <h1> You can't undo this.</h1>
-    <div class="button-wrap">
-      <button type="button" class="cancel-button">Cancel</button>
-      <button type="button" class="delete-button-modal">Delete</button>
-    </div>
+        <div class = "deleteModal">
+          <div class = "modal-content">
+            <h1 class = "modal-header">Are you sure?</h1>
+            <h1> You can't undo this.</h1>
+            <div class="button-wrap">
+              <button type="button" class="cancel-button">Cancel</button>
+              <div class="deleteButton"><%= link_to 'Delete', survey, method: :delete %></div>
+            </div>
+          </div>
+        </div>
+
+      <% end %>
   </div>
 </div>
