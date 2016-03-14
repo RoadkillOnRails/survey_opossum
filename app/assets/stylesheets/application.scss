@@ -33,14 +33,23 @@ $deletecolor: #FF101F;
 }
 
 .app-name {
-  position: relative;
-  right: 760px;
+  position: absolute;
+  left: 70px;
+  top: 18px;
+  white-space: pre;
   color: white;
-  display: inline;
   font-family: $fontFamily;
   font-size: 2em;
 }
 
+.appInfo {
+  display: inline-block;
+  position: relative;
+}
+
+.opposumicon {
+  width: 60px;
+}
 
 .userInfo {
   float: right;
@@ -67,7 +76,6 @@ $deletecolor: #FF101F;
   top: 50px;
   right: 15px;
   border: black;
-  // border-radius: $borderRadius;
   z-index: 1;
     a {
       color: black;
@@ -76,10 +84,6 @@ $deletecolor: #FF101F;
 
 .dropdownItem {
   padding: 5px;
-}
-
-.opposumicon {
-  width: 60px;
 }
 
 // styling for dashboard page
@@ -315,7 +319,7 @@ button:focus {
   text-align: center;
   top: 150px;
   color: white;
-  font-family: "Raleway", sans-serif;
+  font-family: $fontFamily;
   width: 60%;
   margin-left: 20%;
   margin-right: 20%;
@@ -326,7 +330,7 @@ button:focus {
 #new_author {
   color: white;
   font-size: 2em;
-  font-family: "Raleway", sans-serif;
+  font-family: $fontFamily;
   text-align: center;
   position: absolute;
   top: 220px;
@@ -344,6 +348,22 @@ button:focus {
       background: transparent;
       font-size: 0.8em;
     }
+}
+
+// link back to login page
+.back-link {
+  font-family: $fontFamily;
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  a:link, a:visited {
+    color: white;
+    font-size: 1.9em;
+  }
 }
 
 // --------- View/Edit Profile Page ---------
@@ -435,4 +455,72 @@ button:focus {
   margin-left: 10%;
   margin-right: 10%;
   font-family: sans-serif;
+}
+
+// -------- New Survey ---------
+
+.new_survey {
+  border: $borderStyle;
+  border-top: transparent;
+  border-radius: $borderRadius;
+  background: white;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.new-survey-title {
+  font-family: $fontFamily;
+  border: $borderStyle;
+  padding: 20px;
+  font-size: 2em;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  background: white;
+}
+
+// -------- Are you sure delete modal --------
+
+.deleteModal {
+  z-index: 6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  background: rgba(0,0,0,0.4);//black, with 40% opacity
+
+  .modal-content{
+    background: white;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30;
+    padding: 50px;
+    box-sizing: border-box;
+    h1 {
+      padding-bottom: 25px;
+      font-family: $fontFamily;
+      font-size: 2em;
+      text-align: center;
+    }
+    .modal-header {
+      background: $blueaccent;
+      text-align: center;
+      padding: 10px;
+      margin-bottom: 30px;
+    }
+    .button-wrap {
+      text-align: center;
+      button {
+        font-family: sans-serif;
+        font-size: 1em;
+        background: white;
+        border: $borderStyle;
+      }
+    }
+  }
 }
