@@ -11,7 +11,10 @@
 </head>
 <body>
   <header class="header">
-    <%= image_tag asset_url("roadkillpossum.jpg"), class: "opposumicon" %>
+    <%= image_tag asset_url("possum-vector.jpg"), class: "opposumicon" %>
+
+    <div class = "app-name">Survey Opposum</div>
+
     <div class="userInfo">
       <span class="userName">
         <%= p "Hi, #{Author.find(session[:user_id]).first_name}" if session[:user_id] != nil %>
@@ -21,7 +24,7 @@
         <div class="dropdownItem"> <%= link_to "Edit Profile", edit_profile_path %></div>
         <div class="dropdownItem"><%=  link_to "Change Password", edit_login_path %></div>
 
-        <div class="dropdownItem"><%= link_to "Sign Out", logout_path, method: :destroy %></div>
+        <div class="dropdownItem"><%= link_to "Sign Out", logout_path, method: :delete %></div>
 
       </div>
     </div>
