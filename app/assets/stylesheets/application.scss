@@ -30,13 +30,15 @@ $deletecolor: #FF101F;
   margin-bottom: 75px;
   background-color: #555444;
   padding: 10px;
-  .app-name {
-    color: white;
-    display: inline;
-    font-family: $fontFamily;
-    font-size: 2em;
-    padding-bottom: 15px;
-  }
+}
+
+.app-name {
+  position: relative;
+  right: 760px;
+  color: white;
+  display: inline;
+  font-family: $fontFamily;
+  font-size: 2em;
 }
 
 
