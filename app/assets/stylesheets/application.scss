@@ -33,14 +33,23 @@ $deletecolor: #FF101F;
 }
 
 .app-name {
-  position: relative;
-  right: 760px;
+  position: absolute;
+  left: 70px;
+  top: 18px;
+  white-space: pre;
   color: white;
-  display: inline;
   font-family: $fontFamily;
   font-size: 2em;
 }
 
+.appInfo {
+  display: inline-block;
+  position: relative;
+}
+
+.opposumicon {
+  width: 60px;
+}
 
 .userInfo {
   float: right;
@@ -67,7 +76,6 @@ $deletecolor: #FF101F;
   top: 50px;
   right: 15px;
   border: black;
-  // border-radius: $borderRadius;
   z-index: 1;
     a {
       color: black;
@@ -76,10 +84,6 @@ $deletecolor: #FF101F;
 
 .dropdownItem {
   padding: 5px;
-}
-
-.opposumicon {
-  width: 60px;
 }
 
 // styling for dashboard page
@@ -315,7 +319,7 @@ button:focus {
   text-align: center;
   top: 150px;
   color: white;
-  font-family: "Raleway", sans-serif;
+  font-family: $fontFamily;
   width: 60%;
   margin-left: 20%;
   margin-right: 20%;
@@ -326,7 +330,7 @@ button:focus {
 #new_author {
   color: white;
   font-size: 2em;
-  font-family: "Raleway", sans-serif;
+  font-family: $fontFamily;
   text-align: center;
   position: absolute;
   top: 220px;
@@ -344,6 +348,22 @@ button:focus {
       background: transparent;
       font-size: 0.8em;
     }
+}
+
+// link back to login page
+.back-link {
+  font-family: $fontFamily;
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  a:link, a:visited {
+    color: white;
+    font-size: 1.9em;
+  }
 }
 
 // --------- View/Edit Profile Page ---------
