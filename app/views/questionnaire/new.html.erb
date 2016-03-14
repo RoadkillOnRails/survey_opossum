@@ -1,6 +1,6 @@
-<h1>Who wants to be a questionnaire</h1>
 
-<div>
+
+<div class = "new-survey-content">
   <%= form_for(@survey, url: questionnaire_create_path) do |f| %>
     <% if @survey.errors.any? %>
       <div id="error_explanation">
@@ -62,5 +62,5 @@
       <%= f.submit %>
     </div>
   <% end %>
-  <p>* = required question</p>
+  <p class = "req-question">*indicates required question</p>
 </div>
