@@ -1,8 +1,8 @@
-class QuestionaireController < ApplicationController
+class QuestionnaireController < ApplicationController
   def new
     @survey = Survey.where(token: params[:token]).first
     unless @survey
-      redirect_to questionaire_notfound_path
+      redirect_to questionnaire_notfound_path
     end
     @taker = Taker.create
     @taker.token_create
@@ -12,7 +12,7 @@ class QuestionaireController < ApplicationController
     @survey = Survey.find(survey_params[:id])
     # byebug
     if @survey.update(survey_params)
-      redirect_to questionaire_show_path, notice: 'Survey was successfully taken.'
+      redirect_to questionnaire_show_path, notice: 'Survey was successfully taken.'
     else
       @taker = Taker.find(survey_params[:questions_attributes]["0"][:answers_attributes]["0"][:taker_id])
       render :new

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'questionaire/:token/new' => 'questionaire#new', as: :questionaire
-  patch 'questionaire/create'
-  get 'questionaire/show'
-  get 'questionaire/notfound'
+  get 'questionnaire/:token/new' => 'questionnaire#new', as: :questionnaire
+  patch 'questionnaire/create'
+  get 'questionnaire/show'
+  get 'questionnaire/notfound'
 
   root 'dashboard#index'
   get 'dashboard/index'
