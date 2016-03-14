@@ -15,3 +15,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+my_database_development
+my_database_test
