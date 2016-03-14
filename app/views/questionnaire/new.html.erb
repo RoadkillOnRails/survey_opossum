@@ -1,7 +1,7 @@
-<h1>Who wants to be a questionaire</h1>
+<h1>Who wants to be a questionnaire</h1>
 
 <div>
-  <%= form_for(@survey, url: questionaire_create_path) do |f| %>
+  <%= form_for(@survey, url: questionnaire_create_path) do |f| %>
     <% if @survey.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
