@@ -14,11 +14,14 @@ if ($(".savedSurveyList .survey ").length === 0){
   //do nothing
 }
 
-$(".deleteModal").hide(); //hide modal by default
+$(".deleteModal").hide(); //hide modals by default
 
 $(".deleteButton").click(function(){
-  console.log("are you sure");//test eventhandler, there's an alert somewhere, need to find it and delete
-  $(".deleteModal").show();//show the modal
+  // clickedID is assigned the ID of the clicked survey
+  var clickedID = $(this).siblings("input").attr("value");
+  console.log(clickedID);
+  $(this).siblings(".deleteModal").show();
+  console.log($(this).siblings(".deleteModal").children("input").attr("value"));
 });
 
 $(".cancel-button").click(function(){
