@@ -436,3 +436,28 @@ button:focus {
   margin-right: 10%;
   font-family: sans-serif;
 }
+
+// -------- New Survey ---------
+
+.new_survey {
+  border: $borderStyle;
+  border-top: transparent;
+  border-radius: $borderRadius;
+  background: white;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.new-survey-title {
+  font-family: $fontFamily;
+  border: $borderStyle;
+  padding: 20px;
+  font-size: 2em;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  background: white;
+}
