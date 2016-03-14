@@ -15,19 +15,25 @@ if Rails.env.development?
     Survey.create(title: Faker::Hipster.sentence, description: Faker::Hipster.paragraph, token: SecureRandom.urlsafe_base64, author_id: f % 5 + 1)
   end
 
-  50.times do |i|
-    Question.create(question_type_id: 1, survey_id: i % 10 + 1, question_text: Faker::Hacker.say_something_smart, description: Faker::Hipster.paragraph(2), required: rand(2), order: i / 10 * 3 + 1)
-    Question.create(question_type_id: 2, survey_id: i % 10 + 1, question_text: Faker::Hacker.say_something_smart, description: Faker::Hipster.paragraph(2), required: rand(2), order: i / 10 * 3 + 2)
-    Question.create(question_type_id: 3, survey_id: i % 10 + 1, question_text: Faker::Hacker.say_something_smart, description: Faker::Hipster.paragraph(2), required: rand(2), order: i / 10 * 3 + 3)
-    Option.create(question_id: (i + 1) * 3, option: Faker::Book.title, value: Faker::Book.genre)
-    Option.create(question_id: (i + 1) * 3, option: Faker::Book.title, value: Faker::Book.genre)
+  20.times do |i|
+    Question.create(question_type_id: 1, survey_id: i % 10 + 1, question_text: Faker::Hacker.say_something_smart, description: Faker::Hipster.paragraph(2), required: rand(2), order: i / 10 * 4 + 1)
+    Question.create(question_type_id: 2, survey_id: i % 10 + 1, question_text: Faker::Hacker.say_something_smart, description: Faker::Hipster.paragraph(2), required: rand(2), order: i / 10 * 4 + 2)
+    Question.create(question_type_id: 3, survey_id: i % 10 + 1, question_text: Faker::Hacker.say_something_smart, description: Faker::Hipster.paragraph(2), required: rand(2), order: i / 10 * 4 + 3)
+    Question.create(question_type_id: 4, survey_id: i % 10 + 1, question_text: Faker::Hacker.say_something_smart, description: Faker::Hipster.paragraph(2), required: rand(2), order: i / 10 * 4 + 4)
+    Option.create(question_id: (i + 1) * 4 - 1, option: Faker::Book.title, value: Faker::Book.genre)
+    Option.create(question_id: (i + 1) * 4 - 1, option: Faker::Book.title, value: Faker::Book.genre)
+    Option.create(question_id: (i + 1) * 4, option: Faker::Book.title, value: Faker::Book.genre)
+    Option.create(question_id: (i + 1) * 4, option: Faker::Book.title, value: Faker::Book.genre)
+    Option.create(question_id: (i + 1) * 4, option: Faker::Book.title, value: Faker::Book.genre)
+    Option.create(question_id: (i + 1) * 4, option: Faker::Book.title, value: Faker::Book.genre)
   end
 
-  5.times do |a|
-    Answer.create(question_id: (a * 30 +4), answer: Faker::Hacker.say_something_smart, taker_id: rand(1..10))
-    Answer.create(question_id: (a * 30 +5), answer: Faker::Hacker.say_something_smart, taker_id: rand(1..10))
-    Answer.create(question_id: (a * 30 +6), answer: Faker::Hacker.say_something_smart, taker_id: rand(1..10))
-  end
+  # 2.times do |a|
+  #   Answer.create(question_id: (a * 30 + 4), answer: Faker::Hacker.say_something_smart, taker_id: rand(1..10))
+  #   Answer.create(question_id: (a * 30 + 5), answer: Faker::Hacker.say_something_smart, taker_id: rand(1..10))
+  #   Answer.create(question_id: (a * 30 + 6), answer: Faker::Hacker.say_something_smart, taker_id: rand(1..10))
+  #   Answer.create(question_id: (a * 30 + 7), answer: Faker::Hacker.say_something_smart, taker_id: rand(1..10))
+  # end
 end
 
 
