@@ -9,6 +9,7 @@
       <% end %>
       </ul>
     </div>
+
   <% end %>
   <%= f.hidden_field :author_id %>
 
@@ -21,8 +22,9 @@
     <%= f.text_area :description %>
   </div>
 
+<div class ="questions-container">
   <%= f.fields_for :questions do |ff| %>
-    <div>
+    <div class = "short-answer">
       <%= ff.label :order %>
       <%= ff.number_field :order %><br>
       <%= ff.label :question_type_id %>
@@ -31,7 +33,7 @@
       <%= ff.text_field :question_text %><br>
       <%= ff.label :required %>
       <%= ff.check_box :required %><br>
-      <%= ff.link_to_remove "Remove this task" %>
+      <%= ff.link_to_remove "Delete question" %>
       <div>
         <%= ff.fields_for :options do |fff| %>
           <%= fff.label :option %>
@@ -39,10 +41,16 @@
           <%= fff.label :value %>
           <%= fff.text_field :value %>
         <% end %>
-      <div>
+      </div>
     </div>
   <% end %>
+</div>
+
+
   <p><%= f.link_to_add "Add a Question", :questions %></p>
+
+  <button type="button" class="add-question">Add question</button>
+
   <div class="actions">
     <%= f.submit %>
   </div>
