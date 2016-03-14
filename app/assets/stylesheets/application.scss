@@ -30,13 +30,15 @@ $deletecolor: #FF101F;
   margin-bottom: 75px;
   background-color: #555444;
   padding: 10px;
-  .app-name {
-    color: white;
-    display: inline;
-    font-family: $fontFamily;
-    font-size: 2em;
-    padding-bottom: 15px;
-  }
+}
+
+.app-name {
+  position: relative;
+  right: 760px;
+  color: white;
+  display: inline;
+  font-family: $fontFamily;
+  font-size: 2em;
 }
 
 
@@ -64,7 +66,7 @@ $deletecolor: #FF101F;
   position: absolute;
   top: 50px;
   left: -70px;
-  border-radius: $borderRadius;
+  // border-radius: $borderRadius;
   z-index: 1;
     a {
       color: black;
@@ -236,7 +238,7 @@ a {
     bottom: 5px;
   }
   padding {
-    top: 5px;
+    top: 15px;
   }
 }
 
@@ -310,7 +312,7 @@ button:focus {
 .create-account {
   position: absolute;
   text-align: center;
-  top: 200px;
+  top: 150px;
   color: white;
   font-family: "Raleway", sans-serif;
   width: 60%;
@@ -326,7 +328,7 @@ button:focus {
   font-family: "Raleway", sans-serif;
   text-align: center;
   position: absolute;
-  top: 260px;
+  top: 220px;
   left: 0;
   width: 50%;
   margin-left: 25%;
