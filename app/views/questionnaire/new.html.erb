@@ -48,7 +48,10 @@
                         <% drop_down_options << [o.value, o.value] %>
                       <% end %>
                     <% end %>
-                    <%= fff.select :answer, options_for_select(drop_down_options), prompt: ff.object.question_text %>
+                    <%= fff.select :answer, options_for_select(drop_down_options), prompt: "Select an Answer" %>
+                <% end %>
+                <% if ff.object.required %>
+                  <span class="required_question">*<span>
                 <% end %>
               </div>
             <% end %>
@@ -59,4 +62,5 @@
       <%= f.submit %>
     </div>
   <% end %>
+  <p>* = required question</p>
 </div>

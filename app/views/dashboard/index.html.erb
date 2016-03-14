@@ -6,7 +6,7 @@
       <div class="survey">
         <div class="surveyName"><%= survey.title %></div>
         <div class="surveyActions">
-          <a href="<%= survey_path(survey.token)%>"><i class="fa fa-bar-chart"></i></a>
+          <a href="<%= show_survey_path(survey.token)%>"><i class="fa fa-bar-chart"></i></a>
           <div class="unpubButton"><%= link_to 'Unpublish', unpublish_path(survey), method: :patch %></div>
           <div class="deleteButton"><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure?' } %></div>
         </div>
