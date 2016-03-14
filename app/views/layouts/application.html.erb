@@ -11,11 +11,12 @@
 </head>
 <body>
   <header class="header">
-    <%= image_tag asset_url("possum-vector.jpg"), class: "opposumicon" %>
-
-    <div class = "app-name">Survey Opposum</div>
-
+    <div class="appInfo">
+      <%= image_tag asset_url("possum-vector-white.png"), class: "opposumicon" %>
+      <div class = "app-name">Survey Opossum</div>
+    </div>
     <div class="userInfo">
+      <!-- <div class = "app-name">Survey Opossum</div> -->
       <span class="userName">
         <%= p "Hi, #{Author.find(session[:user_id]).first_name}" if session[:user_id] != nil %>
       </span>
