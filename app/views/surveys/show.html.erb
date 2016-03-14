@@ -26,14 +26,18 @@
 
       <div class = "question-answer">
         <div class = "question-text">
-          <div><%=label_tag "Question" %></div>
+          <div><%=label_tag "Question:" %></div>
           <div><%= q.question_text %></div>
         </div>
 
         <div class = "answer-text">
           <div><% q.answers.each do |qq| %></div>
-            <div><%= label_tag "Answer" %></div>
+          <div><%= label_tag "Answer:" %></div>
+          <% if qq.answer == nil || qq.answer == "" %>
+            <div><%= "No Answer Submitted." %></div>
+          <% else %>
             <div><%= qq.answer %></div>
+          <% end %>
         </div>
       </div>
         <% end %>
