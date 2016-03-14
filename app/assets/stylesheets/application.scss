@@ -81,6 +81,14 @@ $deletecolor: #FF101F;
 
 // styling for dashboard page
 
+body {
+  background-color: #eef1f4;
+}
+
+.pubSurveyList, .savedSurveyList {
+  background-color: white;
+}
+
 #pubdSurveys {
   border: $borderStyle;
   border:{
@@ -150,12 +158,13 @@ $deletecolor: #FF101F;
 }
 
 .survey {
-  margin-top: 5px;
+  padding-top: 5px;
 }
 
 .surveyName {
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1.25em;
+  font-family: sans-serif;
   padding-left: 5px;
   width: 300px;
   height: 35px;
@@ -201,6 +210,7 @@ a {
 
 .surveyLink{
   font-size: .8em;
+  font-family: sans-serif;
   margin-left: 5px;
   display: inline-block;
 }
@@ -212,9 +222,12 @@ a {
 
 .newSurvey {
   font-style: italic;
+  color: black;
   margin:{
     left: 5px;
     bottom: 5px;
+  }
+  padding {
     top: 5px;
   }
 }
@@ -331,7 +344,7 @@ button:focus {
       font-family: sans-serif;
       line-height: 1.5;
       padding: 5px 10px;
-      background: transparent;
+      background: white;
       font-size: 1em;
       margin-top: 5px;
       border: solid 2px lightgray;
@@ -363,19 +376,22 @@ button:focus {
     font-family: sans-serif;
     line-height: 1.5;
     padding: 5px 10px;
-    background: transparent;
+    background: white;
     font-size: 1em;
     margin-top: 5px;
     border: solid 2px lightgray;
   }
 }
 
-// ------- Show survey AKA the taker's view ------
+// ------- Show survey results ------
 
 .survey-contents {
+  border: $borderStyle;
+  border-radius: $borderRadius;
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
+  padding: 20px;
   font-family: sans-serif;
     .title-name {
       margin-bottom: 15px;
@@ -390,6 +406,21 @@ button:focus {
     }
 }
 
+.description-name {
+  padding-bottom: 20px;
+  border-bottom: $borderStyle;
+}
+
 .question-contents {
   margin-top: 40px;
+}
+
+
+//-------- Edit Survey -------
+
+.edit_survey {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: sans-serif;
 }
