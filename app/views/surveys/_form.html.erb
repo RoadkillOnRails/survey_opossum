@@ -28,15 +28,13 @@
       <%= ff.label :order %>
       <%= ff.number_field :order %><br>
       <%= ff.label :question_type_id %>
-      <%= ff.collection_select(:question_type_id, QuestionType.all, :id, :category) %><br>
+      <%= ff.collection_select(:question_type_id, QuestionType.all, :id, :category, {}, {onchange: "options_display(#{ff.options[:child_index]});"}) %><br>
       <%= ff.label :question_text %>
       <%= ff.text_field :question_text %><br>
       <%= ff.label :required %>
       <%= ff.check_box :required %><br>
-
       <button type="button" class="remove-question">Delete question</button>
-
-      <div>
+      <div id="options_<%=ff.options[:child_index]%>" class="question_options">
         <%= ff.fields_for :options do |fff| %>
           <%= fff.label :option %>
           <%= fff.text_field :option %>
