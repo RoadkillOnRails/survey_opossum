@@ -14,4 +14,15 @@ if ($(".savedSurveyList .survey ").length === 0){
   //do nothing
 }
 
+$(".deleteModal").hide(); //hide modal by default
+
+$(".deleteButton").click(function(){
+  console.log("are you sure");//test eventhandler, there's an alert somewhere, need to find it and delete
+  $(".deleteModal").show();//show the modal
+});
+
+$(".cancel-button").click(function(){
+  $(".deleteModal").hide();
+});
+
 });
