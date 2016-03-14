@@ -20,7 +20,6 @@ $(".deleteButton").click(function(){
   // clickedID is assigned the ID of the clicked survey
   var clickedID = $(this).siblings("input").attr("value");
   console.log(clickedID);
-  
   $(this).siblings(".deleteModal").show();
   console.log($(this).siblings(".deleteModal").children("input").attr("value"));
 });
