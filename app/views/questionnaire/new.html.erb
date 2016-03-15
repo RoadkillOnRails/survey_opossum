@@ -1,6 +1,6 @@
-<h1>Who wants to be a questionnaire</h1>
 
-<div>
+
+<div class = "new-survey-content">
   <%= form_for(@survey, url: questionnaire_create_path) do |f| %>
     <% if @survey.errors.any? %>
       <div id="error_explanation">
@@ -29,7 +29,7 @@
                     <%= fff.text_field :answer, placeholder: "Answer" %>
                   <% when "Long" %>
                     <%= fff.text_area :answer, placeholder: "Answer" %>
-                  <% when "YesNo" %>
+                  <% when "Radio" %>
                     <% ff.object.options.each do |o| %>
                       <% if o.option %>
                         <%= fff.label :answer_option, o.option %>
@@ -39,6 +39,19 @@
                         <%= fff.radio_button :answer, o.value %>
                       <% end %>
                     <% end %>
+                  <% when "DropDown" %>
+                    <% drop_down_options = [] %>
+                    <% ff.object.options.each do |o| %>
+                      <% if o.option %>
+                        <% drop_down_options << [o.option, o.value] %>
+                      <% else %>
+                        <% drop_down_options << [o.value, o.value] %>
+                      <% end %>
+                    <% end %>
+                    <%= fff.select :answer, options_for_select(drop_down_options), prompt: "Select an Answer" %>
+                <% end %>
+                <% if ff.object.required %>
+                  <span class="required_question">*<span>
                 <% end %>
               </div>
             <% end %>
@@ -49,4 +62,5 @@
       <%= f.submit %>
     </div>
   <% end %>
+  <p class = "req-question">*indicates required question</p>
 </div>

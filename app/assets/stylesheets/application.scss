@@ -201,6 +201,7 @@ body {
 
 .deleteButton {
   background: #555444;
+  color: white;
 }
 
 .unpubButton, .pubButton, .editButton, .divTitle {
@@ -469,6 +470,12 @@ button:focus {
   margin-right: 10%;
   padding: 20px;
   font-family: sans-serif;
+  select {
+    border: $borderStyle;
+  }
+  div {
+    padding-bottom: 20px;
+  }
 }
 
 .new-survey-title {
@@ -481,6 +488,7 @@ button:focus {
   margin-right: 10%;
   background: white;
 }
+
 
 // -------- Are you sure delete modal --------
 
@@ -499,7 +507,7 @@ button:focus {
     width: 40%;
     margin-left: 30%;
     margin-right: 30;
-    padding: 50px;
+    padding-bottom: 50px;
     box-sizing: border-box;
     h1 {
       padding-bottom: 25px;
@@ -523,4 +531,134 @@ button:focus {
       }
     }
   }
+}
+
+// -------- Questionnaire Show Page "Thank you for sharing" ---------
+
+.thank-you {
+  color: #555444;
+  font-size: 4em;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  // background: hsla(360, 100%, 100%, 0.5);
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  input {
+    font-family: sans-serif;
+    color: white;
+    border: solid 3px #fff;
+    line-height: 1.5;
+    padding: 5px 10px;
+    background: transparent;
+    font-size: 0.4em;
+  }
+}
+
+.thank-link {
+  a, a:visited {
+    color:white;
+  }
+  color: white;
+  font-size: 4em;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  // background: hsla(360, 100%, 100%, 0.5);
+  position: absolute;
+  top: 520px;
+  left: 0;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  input {
+    font-family: sans-serif;
+    color: white;
+    border: solid 3px #fff;
+    line-height: 1.5;
+    padding: 5px 10px;
+    background: transparent;
+    font-size: 0.4em;
+  }
+}
+
+.questionnaire-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+// -------- File not found ---------
+.not-found {
+  color: inherit;
+  color: white;
+  font-size: 4em;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  // background: hsla(360, 100%, 100%, 0.5);
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 40%;
+  margin-left: 50%;
+  margin-right: 30%;
+  input {
+    font-family: sans-serif;
+    color: white;
+    border: solid 3px #fff;
+    line-height: 1.5;
+    padding: 5px 10px;
+    background: transparent;
+    font-size: 0.4em;
+  }
+}
+
+.not-found-link {
+  color: white;
+  font-size: 4em;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  // background: hsla(360, 100%, 100%, 0.5);
+  position: absolute;
+  top: 520px;
+  left: 0;
+  width: 40%;
+  margin-left: 70%;
+  margin-right: 30%;
+  input {
+    font-family: sans-serif;
+    color: white;
+    border: solid 3px #fff;
+    line-height: 1.5;
+    padding: 5px 10px;
+    background: transparent;
+    font-size: 0.4em;
+  }
+}
+
+// --------- Survey Takers ----------
+
+.new-survey-content {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  background: white;
+  border: $borderStyle;
+    div {
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+    textarea {
+      width: 50%;
+    }
+    .req-question {
+      font-family: sans-serif;
+      padding-bottom: 20px;
+      padding-left: 20px;
+    }
+    select {
+      border: $borderStyle;
+    }
 }
