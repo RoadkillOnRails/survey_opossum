@@ -17,6 +17,12 @@
 //= require jquery_nested_form
 
 $(function() {
+
+  //if not logged in
+  if (window.location.pathname.match(/^\/questionnaire\//)) {
+    $("#downCaret").hide();
+  };
+
   // inspiration for this example came from here: http://stackoverflow.com/questions/24310046/close-toggle-box-by-clicking-anywhere-else
   $("#downCaret").click(function() {
     event.stopPropagation();
