@@ -49,6 +49,7 @@ group :development, :test do
   gem 'railroady'
   gem 'rails-footnotes', '~> 4.0'
   gem 'sqlite3'
+  gem 'railroady'
 end
 
 group :development do

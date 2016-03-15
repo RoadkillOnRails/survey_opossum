@@ -72,3 +72,23 @@ var clickCount = 0;
 
   });
 });
+
+$(function() {
+
+var optionsCount = 2;
+
+  $('.add-option').click(function(){
+    var index = $(this).attr("value");
+    optionsCount ++;//this number is unique ID
+    console.log(optionsCount);
+
+    $('#options_container_' + index).append(
+        '<div>' +
+        '<label for="survey_questions_attributes_' + index + '_options_attributes_' + optionsCount + '_option">Option</label>' +
+        '<input type="text" name="survey[questions_attributes][' + index + '][options_attributes][' + optionsCount + '][option]" id="survey_questions_attributes_' + index + '_options_attributes_' + optionsCount + '_option">' +
+        '<label for="survey_questions_attributes_' + index + '_options_attributes_' + optionsCount + '_value">Value</label>' +
+        '<input type="text" name="survey[questions_attributes][' + index + '][options_attributes][' + optionsCount + '][value]" id="survey_questions_attributes_' + index + '_options_attributes_' + optionsCount + '_value"><br>' +
+        '</div>'
+    )
+  });
+});

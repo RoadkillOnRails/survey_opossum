@@ -35,12 +35,17 @@
       <%= ff.check_box :required %><br>
       <button type="button" class="remove-question">Delete question</button>
       <div id="options_<%=ff.options[:child_index]%>" class="question_options">
-        <%= ff.fields_for :options do |fff| %>
-          <%= fff.label :option %>
-          <%= fff.text_field :option %>
-          <%= fff.label :value %>
-          <%= fff.text_field :value %>
-        <% end %>
+        <div id="options_container_<%=ff.options[:child_index]%>">
+          <%= ff.fields_for :options do |fff| %>
+            <div>
+              <%= fff.label :option %>
+              <%= fff.text_field :option %>
+              <%= fff.label :value %>
+              <%= fff.text_field :value %>
+            </div>
+          <% end %>
+        </div>
+        <button type="button" class="add-option" value="<%=ff.options[:child_index]%>">Add an Option</button>
       </div>
     </div>
   <% end %>
