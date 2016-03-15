@@ -21,7 +21,7 @@ function set_up_for_edit(){
 $(function() {
 
 $(".new_survey").on('click', '.remove-question', function(){
-  
+
   $(this).parent().remove();
 });
 
@@ -80,6 +80,11 @@ var clickCount = 0;
 
 $(function() {
 
+  $(".new_survey").on('click', '.remove-option', function(){
+
+    $(this).parent().remove();
+  });
+
 var optionsCount = 2;
 
   $('.add-option').click(function(){
@@ -92,7 +97,8 @@ var optionsCount = 2;
         '<label for="survey_questions_attributes_' + index + '_options_attributes_' + optionsCount + '_option">Option</label>' +
         '<input type="text" name="survey[questions_attributes][' + index + '][options_attributes][' + optionsCount + '][option]" id="survey_questions_attributes_' + index + '_options_attributes_' + optionsCount + '_option">' +
         '<label for="survey_questions_attributes_' + index + '_options_attributes_' + optionsCount + '_value">Value</label>' +
-        '<input type="text" name="survey[questions_attributes][' + index + '][options_attributes][' + optionsCount + '][value]" id="survey_questions_attributes_' + index + '_options_attributes_' + optionsCount + '_value"><br>' +
+        '<input type="text" name="survey[questions_attributes][' + index + '][options_attributes][' + optionsCount + '][value]" id="survey_questions_attributes_' + index + '_options_attributes_' + optionsCount + '_value">' +
+        '<button type="button" class="remove-option">Delete Option</button>' +
         '</div>'
     )
   });
