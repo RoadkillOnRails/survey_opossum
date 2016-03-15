@@ -20,6 +20,11 @@ function set_up_for_edit(){
 
 $(function() {
 
+$(".new_survey").on('click', '.remove-question', function(){
+  
+  $(this).parent().remove();
+});
+
 var clickCount = 0;
 
   $('.add-question').click(function(){
