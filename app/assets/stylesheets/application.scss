@@ -417,6 +417,16 @@ button:focus {
 
 // ------- Show survey results ------
 
+.title-name {
+  margin-bottom: 15px;
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+}
+
+.descriptionTitle {
+  font-weight: bolder;
+}
+
 .survey-contents {
   border: $borderStyle;
   border-radius: $borderRadius;
@@ -425,27 +435,51 @@ button:focus {
   margin-left: 10%;
   margin-right: 10%;
   padding: 20px;
-  font-family: sans-serif;
-    .title-name {
-      margin-bottom: 15px;
-      font-family: "Raleway", sans-serif;
-      font-size: 2em;
-    }
-    .question-answer{
-      margin-bottom: 45px;
-    }
-    .question-text, .answer-text {
-      margin-top: 10px;
-    }
+  font-family: "Raleway", sans-serif;
+}
+
+.question-contents {
+  margin-top: 15px;
+}
+
+.question-text, .answer-text {
+  margin-top: 10px;
+}
+
+.question-answer{
+  // margin-bottom: 10px;
+}
+
+.qaLabel {
+  background: white;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding:{
+    top: 10px;
+    right: 10px;
+    left: 10px;
+  }
+  font-weight: bolder;
+  font-family: "Raleway", sans-serif;
+}
+
+.qaText {
+  background: white;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding:{
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+  }
+  font-family: "Raleway", sans-serif;
 }
 
 .description-name {
   padding-bottom: 20px;
   border-bottom: $borderStyle;
-}
-
-.question-contents {
-  margin-top: 40px;
 }
 
 
